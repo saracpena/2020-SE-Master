@@ -1,0 +1,127 @@
+#left_antenna, #right_antenna, #head, #left_arm, #torso, #right_arm, #left_leg, #right_leg { 
+    background-color: #a4c739; 
+  }
+  /*measurements*/
+  #head { 
+    width: 400px; 
+    margin: 0 auto; 
+    height: 200px; 
+    border-radius: 200px 200px 0 0; 
+    -webkit-border-radius: 200px 200px 0 0; 
+    -moz-border-radius: 200px 200px 0 0; 
+    -ms-border-radius: 200px 200px 0 0; 
+    -o-border-radius: 100px 100px 0 0; 
+    margin-bottom: 10px; 
+  } 
+  #upper_body { 
+      width: 600px; 
+      height: 40px; 
+      margin: 0 auto; 
+      text-align: center; 
+  } 
+   #left_arm, #right_arm { 
+       width: 100px; 
+       height: 325px; 
+       float: left; 
+       border-radius: 50px; 
+       -webkit-border-radius: 100px; 
+       -moz-border-radius: 500px; 
+       -ms-border-radius: 100px; 
+       -o-border-radius: 100px; 
+  }
+  #right_arm{ 
+      margin-right: -10px; 
+      margin-left: 0px; 
+  } 
+  #left_arm { 
+      margin-right: 10px; 
+      margin-left: -10px; 
+  } 
+  #torso { 
+      width: 400px; 
+      height: 400px; 
+      float: left; 
+      border-radius: 0 0 50px 50px; 
+      -webkit-border-radius: 0 0 50px 50px; 
+      -moz-border-radius: 0 0 50px 50px; 
+      -ms-border-radius: 0 0 50px 50px; 
+      -o-border-radius: 0 0 50px 50px; 
+      margin-right: 10px; } 
+  #lower_body { 
+      width: 400px; 
+      height: 200px; 
+      margin: 0 auto; 
+  } 
+  #left_leg, #right_leg { 
+      width: 100px; 
+      height: 200px; 
+      float: left; 
+      border-radius: 0 0 100px 100px; 
+      -webkit-border-radius: 0 0 100px 100px; 
+      -moz-border-radius: 0 0 100px 100px; 
+      -ms-border-radius: 0 0 100px 100px; 
+      -o-border-radius: 0 0 100px 100px; } 
+  #left_leg { 
+      margin-left: 75px; 
+  } 
+  #right_leg { 
+      margin-left: 50px; 
+  }
+  /*Eyes*/
+  #left_eye, #right_eye { 
+      width: 30px; 
+      height: 30px; 
+      border-radius: 15px; 
+      -webkit-border-radius: 15px; 
+      -moz-border-radius: 15px; 
+      -ms-border-radius: 15px; 
+      -o-border-radius: 15px; 
+      background-color: white; 
+      float: left; 
+  } 
+  #left_eye { 
+      position: relative; 
+      top: 100px; 
+      left: 90px; 
+  } 
+  #right_eye { 
+      position: relative; 
+      top: 100px; 
+      left: 250px; 
+  }
+  /*Antennas*/
+  #antenna { 
+      width: 400px; 
+      height: 100px; 
+      margin: 0 auto; 
+  } 
+  #left_antenna, #right_antenna { 
+      width: 10px; 
+      height: 100px; 
+      border-radius: 10px; 
+      -webkit-border-radius: 10px; 
+      -moz-border-radius: 10px; 
+      -ms-border-radius: 10px; 
+      -o-border-radius: 10px; 
+      float: left; 
+  } 
+  #left_antenna { 
+      position: relative; 
+      top: 40px; 
+      left: 70px; 
+      transform:rotate(-33deg); 
+      -webkit-transform: rotate(-33deg); 
+      -moz-transform: rotate(-33deg); 
+      -ms-transform: rotate(-33deg); 
+      -o-transform: rotate(-33deg); 
+  } 
+  #right_antenna { 
+      position: relative; 
+      top: 40px; 
+      left: 310px; 
+      transform: rotate(33deg); 
+      -webkit-transform: rotate(33deg); 
+      -moz-transform: rotate(33deg); 
+      -ms-transform: rotate(33deg); 
+      -o-transform: rotate(33deg); 
+  }

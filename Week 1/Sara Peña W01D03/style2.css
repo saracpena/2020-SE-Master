@@ -1,0 +1,74 @@
+#hi{
+    position:relative;
+    margin:0;
+    padding:0;
+    text-align: center;
+    top:115px;
+    left:100px;
+        font-size: 2em;
+}
+#grid2{
+	display:flex;
+	flex-direction:column;
+	width:500px;
+	height:165px;
+	justify-content: space-between;
+}
+#redbox{
+	background-color:red;
+	width:100px;
+	height:75px;
+	transition:1s;
+}
+#bluebox{
+	background-color:blue;
+	width:100px;
+	height:75px;
+	transition:1s 1s;
+}
+#grid2:hover #redbox{
+	width:400px;
+}
+#grid2:hover #bluebox{
+	width:400px;
+}
+
+/*NAV BAR FLEXING*/
+/*body{
+    border: 1px solid black;
+    height: 100vh;
+    Margin: auto;
+    background-color: rosybrown;
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    animation: navi 2s ease-in-out;
+  }
+  a {
+    color: yellow;
+    background-color:blue;
+    text-decoration: none;
+    font-size: 1.2em;
+    border: blue;
+    margin: 10px;
+    padding: 2px 12px;
+    border-radius: 10%;
+    transition: color 0.4s;
+    transition: background-color .5s;
+    font-family: helvetica;
+  }
+  
+  a:hover {
+    color: orangered;
+    background-color: white;
+  }
+  
+  @keyframes navi {
+    0%{ 
+      width: 0%;
+    }
+    100%{ 
+      width: 100%;
+    }
+  }*/

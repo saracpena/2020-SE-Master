@@ -1,0 +1,36 @@
+body{
+    height: 100vh;
+    background-color: rgb(173, 119, 94);
+}
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    animation: navi 2s ease-in-out;
+  }
+  a {
+    color: black;
+    background-color: burlywood;
+    text-decoration: none;
+    font-size: 1.2em;
+    border: rgb(7, 84, 107) solid;
+    margin: 10px;
+    padding: 2px 12px;
+    border-radius: 10%;
+    transition: color 0.4s;
+    transition: background-color .5s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  a:hover {
+    color: black;
+    background-color: orange;
+  }
+  /*IMPORTANT TO ADD KEYFRAMES*/
+  @keyframes navi {
+    0%{ 
+      width: 0%;
+    }
+    100%{ 
+      width: 100%;
+    }
+  }
