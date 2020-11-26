@@ -21,11 +21,25 @@
 // //Scoping = 
 // console.log(i);
 
-//FOR LOOP
-console.log("   for loop=========");
+//FOR LOOP SEQUENTIAL
+console.log("   for loop seq=========");
 
 for(i=1;i<=10;i++){
-    console.log(i);
+    console.log("Hello: ", i);
+}
+
+//FOR LOOP MULTIPLES OF 3
+console.log("   for multiples of 3=========");
+
+for(i=1;i<=10;i+=3){
+    console.log("Hello: ", i);
+}
+
+//FOR LOOP PERFECT SQUARES
+console.log("   for squares=========");
+
+for(square=1;square<=20;square++){
+    console.log(`${square}x${square}=${square * square}`);// square x square = result
 }
 
 console.log("   while loop================");

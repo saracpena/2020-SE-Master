@@ -7,7 +7,12 @@ for(let countDown = 10; countDown>0; countDown--){
 for (var i=10; i>=1; i--){
     console.log(i);
 }
+console.log("      COUNTDOWN BY 25===============")
 
+for (let i=200; i>=0; i-=25)
+    console.log(i);
+
+    
 // [Array] Countdown forEach/forIn
 // console.log("   forInforEach=========")
 // var sub = [1,2,3,4,5,6];
