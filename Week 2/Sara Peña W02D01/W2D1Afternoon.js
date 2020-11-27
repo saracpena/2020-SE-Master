@@ -2,14 +2,16 @@
 //  1, 3, 5, 7, 9
 //  2, 4, 6, 8, 10
 
-// for (var i=1; i<=10; i++){
-//     if(i%2==0){
-//         console.log("this is even "+i);
-//     }
-//     else{
-//         console.log("this is odd "+i);
-//     }
-// }
+for (let x=1; x<=10; x++){
+    if (x%2 == 1){
+        console.log(x + " odd");
+    }
+}
+for (let x=1; x<=10; x++){
+        if (x%2 == 0){
+            console.log(x + " even");
+        }
+}  
 
 //2. Write a for loop that iterates between 0 and 10 and prints all even numbers.
 
@@ -58,11 +60,20 @@
 // }
 
 //FUNCTION = a container that we put 'code' in (logic)
-function outputFormat(num, type){
-    return `${num} is ${type}.`;
-}//output made easy
+// function outputFormat(num, type){
+//     return `${num} is ${type}.`;
+// }//output made easy
 
-function isPrime(num){
-    let lowestPossDenom = Math.floor 
-}
+// function isPrime(num){
+//     let lowestPossDenom = Math.floor 
+// }
 
+//=====
+// for (var i=1; i<=10; i++){
+//     if(i%2==0){
+//         console.log("this is even "+i);
+//     }
+//     else{
+//         console.log("this is odd "+i);
+//     }
+// }
