@@ -16,3 +16,22 @@ do{
     console.log(i);
     i++;
 }while (i<=10);
+
+console.log("   Printing Prime via WHILE LOOP==");
+
+let num = 1;
+while (num <= 20) {
+  let pCount = 2;
+  let flag = 0;
+  while (pCount < num) {
+    if (num % pCount == 0) {
+      flag = 1;
+      break;
+    }
+    pCount++;
+  }
+  if (num > 1 && flag == 0) {
+    console.log(num + " is prime");
+  }
+  num++;
+}

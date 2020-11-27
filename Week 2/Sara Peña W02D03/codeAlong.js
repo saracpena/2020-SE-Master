@@ -2,11 +2,10 @@
 function theSum(x,y,z){
     return (x+y+z)/3;
 }
-
-sum=theSum(1,2,4);
+let sum = theSum(1,2,3);
 
 console.log(sum);
 
 //try converting the code to arrow functions
-theSum = (x,y,z) => x+y+z;
-    console.log(theSum(1,2,3));
+let theSum2 = (x,y,z) => (x+y+z)/3;
+    console.log(theSum2(1,2,3));
