@@ -1,3 +1,5 @@
+//It repeats a set of instructions while that condition is true
+
 console.log("   while loop================");
 
 //WHILE LOOP
@@ -18,6 +20,9 @@ do{
 }while (i<=10);
 
 console.log("   Printing Prime via WHILE LOOP==");
+//checks the condition again, and repeats. 
+//This continues until the condition is not satisfied, and it stops executing the tasks.
+//Use while loops when you know when a program should stop, but not the number of times it should repeat.
 
 let num = 1;
 while (num <= 20) {

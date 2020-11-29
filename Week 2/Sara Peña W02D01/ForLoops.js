@@ -65,7 +65,10 @@ console.log("   forEach/forIn Loop=================");
 
 //Going through each loop is AKA iteration*/
 
-//forEach OR forIn synonymous
+//forEach OR forIn are SYNONYMOUS
+//We define a sequence of desired tile colors (a list), 
+//and tell the computer to repeat the instructions for each item in the sequence.
+
 var sub = [1,2,3];
 for(i in sub)
     console.log(sub[i]);
