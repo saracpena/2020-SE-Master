@@ -70,15 +70,27 @@ function isCharacterAVowel(vowels){
 //all the numbers in an array of numbers. For example, sumArray([1,2,3,4]) should return 10, and 
 //multiplyArray([1,2,3,4]) should return 24.
 
-var result = 0;
+const sumArray = (Array) => {
+    let sum = 0;
+    let product = 1;
+    for (let i=0; i < Array.lenght; i++) {
+        sum += array[i];
+        product *= array[i];
+    }
+    console.log(`sum equals ${sum}\nProduct equals ${product}`);
+};
 
-function sumArray(x){
-    x.forEach(element => {
-        result+= elements; 
-    });
-    return result;
-}
-// function multiplyArray()
+sumArray([1,2,3,4]);
+
+// var result = 0;
+
+// function sumArray(x){
+//     x.forEach(element => {
+//         result+= elements; 
+//     });
+//     return result;
+// }
+// // function multiplyArray()
 
 
 //5. Write a function that returns the number of arguments passed to the function when called.
