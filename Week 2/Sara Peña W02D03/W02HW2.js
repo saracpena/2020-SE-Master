@@ -58,6 +58,21 @@ function isCharacterAVowel(vowels){
     console.log(isCharacterAVowel("z"));
 
 //2nd Version
+
+let isCharacterAVowel = letter => {
+
+    let vowels = ['a','e','i','o','u'];
+
+    for(let i of vowels){
+       if(letter === i){
+           return true;
+       } 
+    }
+    return false
+}  
+console.log(isCharacterAVowel)
+
+//2nd Version
 // var vowels = ['a','e','i','o','u'];
 
 //     function isCharacterAVowel(vowels,x){ //define function
@@ -70,17 +85,17 @@ function isCharacterAVowel(vowels){
 //all the numbers in an array of numbers. For example, sumArray([1,2,3,4]) should return 10, and 
 //multiplyArray([1,2,3,4]) should return 24.
 
-const sumArray = (Array) => {
-    let sum = 0;
-    let product = 1;
-    for (let i=0; i < Array.lenght; i++) {
-        sum += array[i];
-        product *= array[i];
-    }
-    console.log(`sum equals ${sum}\nProduct equals ${product}`);
-};
+// const sumArray = (Array) => {
+//     let sum = 0;
+//     let product = 1;
+//     for (let i=0; i < Array.lenght; i++) {
+//         sum += array[i];
+//         product *= array[i];
+//     }
+//     console.log(`sum equals ${sum}\nProduct equals ${product}`);
+// };
 
-sumArray([1,2,3,4]);
+// sumArray([1,2,3,4]);
 
 // var result = 0;
 
@@ -110,14 +125,43 @@ sumArray([1,2,3,4]);
 //   revString(strArg);
         
 //7. Write a function findLongestWord that takes an array of words and returns the length of the longest one.
-        
+
+    // function findLongestWord(word){
+    //     let longestWord = '';
+    //     for(let i = 0; i <word.length; i++){
+    //         if(longestWord.length < word[i].length){
+    //             longestWord = word[i];
+    //         }
+    //     }
+    //     return longestWord;
+    // // }
+    // }
+
+    function findLongestWord(word) {
+        return word.reduce((a,b) => a.length < b.length ? b : a, "");
+}
+    console.log(findLongestWord(['Ten','Thousand','Dollars']));
+    
+
 //8. Write a function filterLongWords that takes an array of words and a number i and returns the array of words that are longer than i characters long.
-        
+
+function filterLongWords(complete, i){
+    let words = [];
+    for(let z = 0; z < complete.length; z++){
+        if(complete[z].length > i){
+          words.push(complete[z]);  
+        }
+    }  
+    return words;
+}
+console.log(filterLongWords(['One','Twenty','Seven'], 5));
 
 //==========BONUS=========//
         
 //1. Add a method reverseString (from question 6) to the object String so that it is possible to call: 
 //"Per Scholas".reverseString().
+
+
 
 
         
