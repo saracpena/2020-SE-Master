@@ -59,18 +59,18 @@ function isCharacterAVowel(vowels){
 
 //2nd Version
 
-let isCharacterAVowel = letter => {
+// let isCharacterAVowel = letter => {
 
-    let vowels = ['a','e','i','o','u'];
+//     let vowels = ['a','e','i','o','u'];
 
-    for(let i of vowels){
-       if(letter === i){
-           return true;
-       } 
-    }
-    return false
-}  
-console.log(isCharacterAVowel)
+//     for(let i of vowels){
+//        if(letter === i){
+//            return true;
+//        } 
+//     }
+//     return false
+// }  
+// console.log(isCharacterAVowel)
 
 //2nd Version
 // var vowels = ['a','e','i','o','u'];
@@ -126,19 +126,19 @@ console.log(isCharacterAVowel)
         
 //7. Write a function findLongestWord that takes an array of words and returns the length of the longest one.
 
-    // function findLongestWord(word){
-    //     let longestWord = '';
-    //     for(let i = 0; i <word.length; i++){
-    //         if(longestWord.length < word[i].length){
-    //             longestWord = word[i];
-    //         }
-    //     }
-    //     return longestWord;
-    // // }
-    // }
+    function findLongestWord(arr){
+        let word = '';
+        for(let i = 0; i <arr.length; i++){
+            if(word.length < arr[i].length){
+                word = arr[i];
+            }
+        }
+        return word;
+    }
+    
 
-    function findLongestWord(word) {
-        return word.reduce((a,b) => a.length < b.length ? b : a, "");
+    function findLongestWord(arr) {
+        return arr.reduce((a,b) => a.length < b.length ? b : a, "");
 }
     console.log(findLongestWord(['Ten','Thousand','Dollars']));
     
