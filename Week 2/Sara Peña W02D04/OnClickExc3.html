@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--W2D4 Slide 22-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slide 21</title>
+
+</head>
+
+<body>
+    <div>
+        <input id='a' type="text" name="" value="">
+        <input id='b' type="text" name="" value="">
+        <input id='sum' type="text" name="" value="">
+        <p id="sum1"></p>
+        <input type="button" name="" value="sum" onclick="sum()">
+    </div>
+
+    <script type="text/javascript">
+        function sum(){ 
+            var a = Number(document.getElementById('a').value); //Casting is similar to ParseInt creating 'a' string to a NUMBER
+            var b = Number(document.getElementById('b').value); //hence the "Number" at the beginning
+            var sum = a + b;
+            //alert(sum);
+            document.getElementById('sum').value = sum;
+            document.getElementById('sum1').innerHTML = sum;
+            console.log(a + "" + b);
+        }
+    </script>
+
+</body>

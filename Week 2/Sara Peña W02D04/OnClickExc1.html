@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--W2D4 Slide 16-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slide 16</title>
+
+</head>
+
+<body>
+
+    <div>
+        <h3 id="First">Heading One</h3>
+        <button onclick="document.getElementById('First').style.color='Blue'">ON</button>
+        <button onclick="document.getElementById('First').style.color='Black'">OFF</button>
+    </div>
+
+    <div class="padding">
+        <h3 id="Second">Heading Two</h3>
+        <button onclick="document.getElementById('Second').style.color='Purple'">ON</button>
+        <button onclick="document.getElementById('Second').style.color='Black'">OFF</button>
+    </div>
+
+    <div class="padding">
+        <h3 id="Third">Heading Three</h3>
+        <button onclick="document.getElementById('Third').style.color='Green'">ON</button>
+        <button onclick="document.getElementById('Third').style.color='Black'">OFF</button>
+    </div>
+
+    <div class="padding">
+        <button onclick="document.getElementById('myImage').src='summer.jpeg'">ON</button>
+        <img id="myImage" src="Summer.jpeg" style="width:150px">
+        <button onclick="document.getElementById('myImage').src='winter.jpeg'">OFF</button>
+    </div>
+
+    <div>
+        <p id="demo" class="padding"></p>
+
+        <script>
+            function color(){document.getElementById("Third").style.color = "blue";}
+        </script>
+    </div>
+
+
+
+</body>
+
+</html>

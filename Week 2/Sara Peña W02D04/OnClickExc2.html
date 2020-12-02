@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--W2D4 Slide 21-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slide 21</title>
+
+</head>
+
+<body>
+    <h3 id='1'>
+        H1
+    </h3>
+
+    <h3 id='2'>
+        H2
+    
+    </h3>
+
+    <h3 id='3'>
+        H3
+    
+    </h3>
+    
+    <button onclick = 'changeDisplay()'>Changing Headers</button>
+    <button onclick = 'resetDisplay()'>Reset</button>
+
+    <script type="text/javascript">
+        function changeDisplay(){
+            document.getElementById('1').style.fontSize = '20px';
+            document.getElementById('2').style.display = 'none';
+            document.getElementById('3').style.color = 'orange';
+        }
+        function resetDisplay(){
+            document.getElementById('1').style.fontSize = 'block';
+            document.getElementById('2').style.display = 'block';
+            document.getElementById('3').style.color = 'black';
+        }
+    </script>
+</body>
