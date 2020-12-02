@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--W2D4 Slide 26-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slide 21</title>
+
+</head>
+
+<body>
+
+    <img id="img" src = "Summer.jpeg" alt="img">
+    <br>
+    <button onclick="changeImage(-1)">Back</button>
+    <button onclick="changeImage(1)">Next</button>
+    
+</body>
+
+<script type="text/javascript">
+        index = 0;
+        function changeImage(x){
+        console.log(Number(x));
+        var images = ["Summer.jpeg","Flower.jpeg","creek.jpeg","sunset.jpeg","Winter.jpeg"]
+        
+        //x is positive i.e. Next
+        if(x>0){
+            index++;
+            if(index>=images.length){
+                document.getElementById('img').src= images[images.length-1];
+                index = images.length-1 //
+            } else {
+                document.getElementById('img').src = images[index];
+            }
+        }
+        //x is negative i.e. Back
+        if(x<0){
+            index--;
+            if(index<0){
+                document.getElementById('img').src= images[0];
+                index = 0
+            }else {
+                document.getElementById('img').src = images[index];
+            }
+        } console.log(index);
+    }   
+
+</script>
+
+<!-- <div>
+    <form name='Calc'>
+        <table border=4>
+            <tr>
+                <input type="text" name="Input" size="16">
+            </tr>
+            <tr>
+                <input type="button" name="Back" value="1" onclick="Calc.Input.value-='1'">
+                <input type="button" name="Next" value="2" onclick="Calc.Input.value+='2'">
+            </tr>
+            <tr>
+                <input type="button" name="Back2" value="-" onclick="Calc.Input.value-='-'">
+                <input type="button" name="Next2" value="+" onclick="Calc.Input.value+='+'">
+            </tr>
+        </table>
+    </form>
+
+</div>
+
+
+    <div class="padding">
+        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Back</button>
+        <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+        <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Next</button>
+    </div> -->
