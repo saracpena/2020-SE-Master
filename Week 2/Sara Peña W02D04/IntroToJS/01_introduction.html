@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .padding {
+            padding-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h3 id="welcome">Welcome to Java Script</h3>
+        <button type="button" onclick="document.getElementById('welcome').style.display='none'">Hide</button>
+        <button type="button" onclick="document.getElementById('welcome').style.display='block'">Show</button>
+        <button type="button" onclick="document.getElementById('welcome').style.fontSize='35px'">Change</button>
+
+    </div>
+
+    <div class="padding">
+        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">ON</button>
+        <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+        <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">OFF</button>
+    </div>
+
+
+    <div>
+        <p id="demo" class="padding"></p>
+
+        <script>
+            document.getElementById("demo").innerHTML = "JavaScript is FUN!";
+        </script>
+    </div>
+
+
+
+</body>
+
+</html>
