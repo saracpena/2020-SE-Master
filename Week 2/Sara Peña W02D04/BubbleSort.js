@@ -1,22 +1,40 @@
 let bubbleSort = (inputArr) => {
-    let len = inputArr.length;
-    let swapped;
+    let len = inputArr.length;//containing the arr length
+    let swapped; //Keeping track of iterations
     do {
-        swapped = false;
+        swapped = false;//if sorted > unsorted
         for (let i = 0; i < len; i++) {
-            if (inputArr[i] > inputArr[i + 1]) {
-                let tmp = inputArr[i];
-                inputArr[i] = inputArr[i + 1];
-                inputArr[i + 1] = tmp;
-                swapped = true;
+            if (inputArr[i] > inputArr[i + 1]) {//Is sorted > unsorted
+                let tmp = inputArr[i]; //temporary container 'tmp' for 'sorted'
+                inputArr[i] = inputArr[i + 1];//if sorted > unsorted, swap
+                inputArr[i + 1] = tmp;//shift what was sorted to unsorted 'iteration by iteration'
+                swapped = true;//if true, iteration will continue to execute
             }
         }
-    } while (swapped);
+    } while (swapped);//'as long as' this is true, loop will continue to execute. Otherwise, it will stop.
     return inputArr;
 };
 console.log(bubbleSort([5,7,90,25,1,56,35]));
 
+//Reverse Bubble Sort
 
+let revBubbleSort = (inputArr) => {
+    let len = inputArr.length;//containing the arr length
+    let swapped; //Keeping track of iterations
+    do {
+        swapped = false;//if sorted < unsorted
+        for (let i = 0; i < len; i++) {
+            if (inputArr[i] > inputArr[i - 1]) {//Is sorted > unsorted
+                let tmp = inputArr[i]; //temporary container 'tmp' for 'sorted'
+                inputArr[i] = inputArr[i - 1];//if sorted > unsorted, swap
+                inputArr[i - 1] = tmp;//shift what was sorted to unsorted 'iteration by iteration'
+                swapped = true;//if true, iteration will continue to execute
+            }
+        }
+    } while (swapped);//'as long as' this is true, loop will continue to execute. Otherwise, it will stop.
+    return inputArr;
+};
+console.log(revBubbleSort([5,7,90,25,1,56,35]));
 
 //BUBBLE SORT RECURSION
 // Can bubble sort be implemented recursively?
