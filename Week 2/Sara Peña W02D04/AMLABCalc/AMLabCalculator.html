@@ -10,7 +10,94 @@
     <link href="scripts.js" rel="scripts">
 
 </head>
+
 <body>
+<div id="calc">
+	<input type="text" name="a" id ="a">
+	<br>
+	<input type="text" name="b" id ="b"> <!-- these two named per instructions -->
+	<br>
+    <input type="text" name="output" id="output">
+</div>
+<br>
+<div id="buttons">
+	<br>
+    <button onclick="add()">Add</button>
+    <br>
+	<button onclick="subtract()">Subtract</button>
+	<br>
+    <button onclick="multiply()">Multiply</button>
+    <br>
+	<button onclick="divide()">Divide</button>
+	<br>
+	<button onclick="avg()">Average</button>
+    <br>
+	<button onclick="clearInputFields('a','b','output')">Clear</button>
+<br>
+
+	<button onclick="">Average</button>
+</div>
+
+
+	<!-- clear input fields is its own function so that I can clear everything here and just input fields in outputFunction. -->
+<script type="text/javascript">
+
+	function getVal(elemName){ //gets the value of a specified ID. typing getVal() is shorter than what's inside it.
+		return Number(document.getElementById(elemName).value);
+
+	}
+
+	function clearInputFields(...args){ /*
+		called args because i was worried about scope. not sure if a valid fear. this function just clears the values of text boxes
+		*/
+		args.forEach(id => document.getElementById(id).value = '');
+	}
+	function outputFunction(val,...idList){ //i was typing this stuff a lot, so i figured i should make a function
+		/*
+		these parameters allow the function to take in as many ids as a coder would want.
+		unnecessary, probably overkill, and a potential issue for larger arrays (from what i understand),
+		but i wanted to practice with it.
+		*/
+		document.getElementById("output").value = val;
+		clearInputFields(...idList); //clearing the input field is kinda dumb to be honest, but it's already here so
+	}
+
+
+	function add(){ //adds
+		var a = getVal("a");
+		var b = getVal("b");
+		outputFunction(a + b, "a","b");
+	}
+
+	function subtract(){ //subtracts	
+		var a = getVal("a");
+		var b = getVal("b");
+		outputFunction(a - b, "a","b");
+	}
+
+	function multiply(){ //multiplies	
+		var a = getVal("a");
+		var b = getVal("b");
+		outputFunction(a * b, "a","b");
+	}
+
+
+	function divide(){ //surprise, itdivides
+		var a = getVal("a");
+		var b = getVal("b");
+		outputFunction(a / b, "a","b");
+	}
+
+	function avg(){
+		var a = getVal("a");
+		var b = getVal("b");
+		outputFunction((a+b)/2,"a","b");
+	}
+
+</script>
+</body>
+<!--MY ORIGINAL CODE December 3, 2020-->
+<!-- <body>
     <div id="calc">
         <input id='a' type="text" name="" value="">
         <input id='b' type="text" name="" value="">
