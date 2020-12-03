@@ -1,0 +1,31 @@
+body{
+    display: flex;    
+    border: solid black 2px;
+    width: 250px;
+    align-content: center;
+    padding: 5px;
+    
+}
+
+#calc{
+
+}
+
+#buttons{
+    display: grid;
+    padding: 5px;
+   
+}
+
+#a{
+    margin: 5px;
+}
+#b{
+    margin: 5px;
+}
+#c{
+    margin: 5px;
+}
+#clear{
+    margin: 5px;
+}

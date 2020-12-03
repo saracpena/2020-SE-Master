@@ -11,7 +11,7 @@
 
 <body>
 
-    <img id="img" src = "Summer.jpeg" alt="img">
+    <img id="img" src = "Summer.jpeg" alt="img" style="widows: 500px;height:500px"><!--MUST RESIZE IMAGES-->
     <br>
     <button onclick="changeImage(-1)">Back</button>
     <button onclick="changeImage(1)">Next</button>
@@ -47,6 +47,40 @@
     }   
 
 </script>
+
+<!--CLIVE'S CODE-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Image SlidShow</title>
+</head>
+<body>
+  <div>
+    <img src="./image/img1.jpg" alt="image1" width="100%" height="100%" style="transition: all 2s;">
+    <br>
+    <button onclick="plusDivs(-1)">Back</button><button onclick="plusDivs(1)">Forward</button>
+  </div>
+  <script>
+    var num = 1;
+    function plusDivs(x) {
+      if (x === 1) {
+        num += 1
+        document.getElementsByTagName("img").item(0).src = "./image/img" + String(num) + ".jpg"
+        console.log(document.getElementsByTagName("img").item(0).src = "./image/img" + String(num) + ".jpg");
+      }else if(x === -1 && num > 1){
+        num -= 1
+        document.getElementsByTagName("img").item(0).src = "./image/img" + String(num) + ".jpg"
+      }
+    }
+  </script>
+</body>
+</html> -->
+
+
+
 
 <!-- <div>
     <form name='Calc'>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--W2D4 Morning Lab: Calculator-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link href="stylesheet.css" rel="stylesheet">
+    <link href="scripts.js" rel="scripts">
+
+</head>
+<body>
+    <div id="calc">
+        <input id='a' type="text" name="" value="">
+        <input id='b' type="text" name="" value="">
+        <input id='c' type="text" name="" value="">
+        <button id='clear'>Clear</button>
+    </div>
+    <br>
+    <div id="buttons">
+        <input id='sum' type="button" name="" value="sum" onclick="sum()">
+        <input id='sub' type="button" name="" value="subtract" onclick="sub()">
+        <input id='mult' type="button" name="" value="mult" onclick="mult()">
+        <input id='div' type="button" name="" value="div" onclick="div()">
+    </div>
+</body>
+
+
+<!--INNER HTML JAVASCRIPT-->
+<!-- <script type="text/javascript">
+    // var a = 0; //input one
+    // var b = 1; //input two
+    // var c = 2; //sum of inputs
+    
+    function sum(){ 
+            var a = Number(document.getElementById('a').value); //Casting is similar to ParseInt creating 'a' string to a NUMBER
+            var b = Number(document.getElementById('b').value); //hence the "Number" at the beginning
+            var sum = a + b;
+            //alert(sum);
+            document.getElementById('sum').value = sum;
+            document.getElementById('sum1').innerHTML = sum;
+            console.log(a + "" + b);
+    }
+
+    function sub(){ 
+            var a = Number(document.getElementById('a').value); //Casting is similar to ParseInt creating 'a' string to a NUMBER
+            var b = Number(document.getElementById('b').value); //hence the "Number" at the beginning
+            var sum = a - b;
+            //alert(sum);
+            document.getElementById('sub').value = sum;
+            document.getElementById('sum1').innerHTML = sum;
+            console.log(a + "" + b);
+    }
+
+    function mult(){ 
+            var a = Number(document.getElementById('a').value); //Casting is similar to ParseInt creating 'a' string to a NUMBER
+            var b = Number(document.getElementById('b').value); //hence the "Number" at the beginning
+            var sum = a * b;
+            //alert(sum);
+            document.getElementById('mult').value = sum;
+            document.getElementById('sum1').innerHTML = sum;
+            console.log(a + "" + b);
+
+    }
+
+    function div(){ 
+            var a = Number(document.getElementById('a').value); //Casting is similar to ParseInt creating 'a' string to a NUMBER
+            var b = Number(document.getElementById('b').value); //hence the "Number" at the beginning
+            var sum = a / b;
+            //alert(sum);
+            document.getElementById('div').value = sum;
+            document.getElementById('sum1').innerHTML = sum;
+            console.log(a + "" + b);
+    }
+</script> -->
