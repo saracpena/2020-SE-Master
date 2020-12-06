@@ -1,0 +1,46 @@
+.blue #txtTempo{
+	position:absolute;
+    box-sizing: border-box;
+	left: 100px;
+	top:140px;
+ 	font-size: 50px;
+    background-color: #0781D4;
+    border:none;
+    padding:0;
+    margin:0;
+
+}
+
+.blue .inside{
+    position:absolute;
+	left: 100px;
+	top:  170px;
+	font-size: 50px:
+    margin: 0;
+    padding: 0;
+    transform: translateY(-50%);
+}
+
+.blue {
+  height: 300px;
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  line-height:300px;
+  background-color: #0781D4;
+  border-radius: 50%; 
+  text-align:center;
+  font-size:50px;
+}
+
+.red {
+  height: 300px;
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  line-height:300px;
+  background-color: red;
+  border-radius: 50%; 
+  text-align:center;
+  font-size:50px;
+}
