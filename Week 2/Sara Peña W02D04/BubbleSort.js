@@ -1,3 +1,5 @@
+//BUBBLE SORT is LEAST EFFICIENT BECAUSE IT IS A LINEAR ALGORITHM
+
 let bubbleSort = (inputArr) => {
     let len = inputArr.length;//containing the arr length
     let swapped; //Keeping track of iterations
@@ -90,3 +92,8 @@ console.log(revBubbleSort([5,7,90,25,1,56,35]));
 //    end for
    
 // end
+
+const x = 6 % 2;
+const y = x ? 'One' : 'Two';
+console.log(y)
+
