@@ -1,21 +1,30 @@
-.blue #txtTempo{
-	position:absolute;
-    box-sizing: border-box;
-	left: 100px;
-	top:140px;
- 	font-size: 50px;
-    background-color: #0781D4;
-    border:none;
-    padding:0;
-    margin:0;
+body, html{
+  background-image: url("https://images.unsplash.com/photo-1473147319958-21c51372f690?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2552&q=80");
+  background-color: none;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;  
+}
 
+.blue #txtTempo{
+	position: absolute;
+  box-sizing: border-box;
+	left: 120px;
+	top:50px;
+ 	font-size: 50px;
+  background-color: #0781D4;
+  border: 2px solid black;
+  padding: 0;
+  margin: 5px;
 }
 
 .blue .inside{
     position:absolute;
-	left: 100px;
-	top:  170px;
-	font-size: 50px:
+	  left: 100px;
+	  top:  170px;
+	  font-size: 50px;
     margin: 0;
     padding: 0;
     transform: translateY(-50%);

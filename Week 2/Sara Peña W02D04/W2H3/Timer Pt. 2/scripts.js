@@ -34,7 +34,6 @@ function Clicked(evt) {
         // its important to remove the keydown listener, otherwise in a subsequent edit
         // we will end up with several keydown listeners running
         
-
 		clearInterval(tempor);
 		tempor = setInterval(updateTime, 1000);
 	}
