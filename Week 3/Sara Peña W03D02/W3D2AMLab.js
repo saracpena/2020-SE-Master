@@ -57,7 +57,14 @@ console.log(yoda);
 
 //3RD VERSION OF #4
 
-
+var waitList = [ "Chance the Rapper", "Khalid", "Tay-Tay", "Barry Manilow", "Piko Taro" ];
+var nowServing = "";
+for(var i = 0; i < 5; i++){
+    nowServing = waitList.shift();
+    console.log(nowServing);
+    console.log(waitList);
+}
+console.log("Done");
 
 
 // 5. Help Nike sell more overpriced sneakers by changing their slogan from an array into a string. 
@@ -65,6 +72,6 @@ console.log(yoda);
 
 var shoe = ["just", "do", "it"];
 var shoeString = shoe.toString();
-console.log(shoeString);
+console.log(shoeString.toString());
  
 
