@@ -84,3 +84,17 @@ const bar = function sum (x,y){
 }
 
 console.log(bar(2,3));
+
+//Determine Access if 18+
+function determineAccess(b){
+    //write the logic
+  if (b >= 18) {
+    var c = b+2; //store the calculation in "c"
+    return (c); //throw "c"
+  }
+  }
+  var a = 45;
+  let result = determineAccess(a); //invoke the function and
+                                // catch the return from the function in a variable called "result"
+  console.log(result); //print the output to the console
+  
