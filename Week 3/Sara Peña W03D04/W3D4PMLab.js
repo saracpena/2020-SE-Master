@@ -1,6 +1,6 @@
-// Create an Animal class. 
-// The class will have name, age, color, legs, superPower attributes
-// Create two objects of this class - both with a unique superPower
+// Create an Animal class. ^
+// The class will have name, age, color, legs, superPower attributes ^
+// Create two objects of this class - both with a unique superPower 
 // create three methods for this class - include one method named userSuperPower()
 // Create two objects for this class
 // Create a class name User
@@ -12,7 +12,10 @@
 
 class Animal{//CLASS
     constructor(email, name){//is a function
-        this.email = email;
         this.name = name;
-        this.score = 0;//must add another property to method chain
+        this.age = age;
+        this.color = color;//must add another property to method chain
+        this.legs = legs;
+        this.superPower = superPower;
     }
+}

@@ -9,3 +9,7 @@
     //of the snack and then that snack will be returned
 // Be able to call vendingMachine.vend() with a valid integer to return a snack
 
+vendingMachine(){
+    name:
+    
+}
