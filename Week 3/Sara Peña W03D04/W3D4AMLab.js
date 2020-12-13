@@ -9,18 +9,22 @@
 // Which of the two can have implementation of a method in the class?
 
 class Fish {
-    Swim(){
-      console.log("Cannot swim");
+  constructor(){
+
+  } 
+  Swim(){
+      console.log("Can swim");
     }
   }
 
 class Nemo extends Fish{
     constructor(color){
+      super();//used to access to the object's parents i.e. 'FIRST CLASS' aka 'FISH', must go before 'this'.attribute
       this.color = color;
     }
 }
 
-let Nemo1 = new Fish("Orange");
+let Nemo1 = new Nemo("Orange");
 console.log(Nemo1.Swim());
 
 // function createNewPerson(name) {

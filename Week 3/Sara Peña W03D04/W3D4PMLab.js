@@ -23,6 +23,9 @@ class Animal{//CLASS
 let dog = new Animal('Charlie', 16, 'red-brown' , 4, 'reads your mind');
 
 let puppy = new Animal('Darcy', 1, 'black and white', 4, 'makes you happy');
+console.log(puppy.superPower);
+// dog.name = "Fluffy";
+// console.log(dog.name);
 
 // Create a class name User
 // This class with have firstName, lastName, department attributes 
@@ -30,6 +33,7 @@ let puppy = new Animal('Darcy', 1, 'black and white', 4, 'makes you happy');
 // Create three instances of this class
 // Change department for two of the instances
 // Create three objects for this class
+
 class User{
     constructor(firstName, lastName, department){
         this.firstName = firstName;
