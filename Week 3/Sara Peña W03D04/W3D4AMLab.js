@@ -1,8 +1,7 @@
 // OOP - Inheritance 
 
 // Create a class called Fish ^
-
-// Define a method Swim( ) ?
+// Define a method Swim() 
 // Create a class Nemo that inherits from Fish ^
 // Define an attribute color ^
 // Create a Nemo object. Can it swim? 
@@ -10,16 +9,19 @@
 // Which of the two can have implementation of a method in the class?
 
 class Fish {
-    constructor(color) {
-      this.color = color;
+    Swim(){
+      console.log("Cannot swim");
     }
   }
 
 class Nemo extends Fish{
-    (fish){
-
+    constructor(color){
+      this.color = color;
     }
 }
+
+let Nemo1 = new Fish("Orange");
+console.log(Nemo1.Swim());
 
 // function createNewPerson(name) {
 //     const Nemo = {};
@@ -29,3 +31,20 @@ class Nemo extends Fish{
 //     };
 //     return obj;
 //   }
+
+// class Fish {
+//   constructor() {
+//   }
+//   swim() {
+//     console.log("I can swim");
+//   }
+// }
+
+// class Nemo extends Fish {
+//   constructor(color) {
+//     super();
+//     this.color = color;
+//   }
+// }
+// var Nemoo = new Nemo("purple");
+// Nemoo.swim();
