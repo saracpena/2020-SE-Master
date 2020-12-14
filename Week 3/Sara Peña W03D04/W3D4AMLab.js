@@ -8,24 +8,26 @@
 // Find the difference between abstract class and an interface
 // Which of the two can have implementation of a method in the class?
 
-class Fish {
-  constructor(){
-
+class Fish {//Parent Class 'Fish'
+  constructor(name){
+    this.name = name;
   } 
   Swim(){
       console.log("Can swim");
     }
   }
 
-class Nemo extends Fish{
+class Nemo extends Fish{//Child Class of Class 'Fish'
     constructor(color){
-      super();//used to access to the object's parents i.e. 'FIRST CLASS' aka 'FISH', must go before 'this'.attribute
+      super();//used to access the object's parent i.e. 'SUPER CLASS' aka 'FISH', must go before the 'this'.attribute
       this.color = color;
+
     }
 }
 
-let Nemo1 = new Nemo("Orange");
-console.log(Nemo1.Swim());
+let Nemo1 = new Nemo('Orange');//Object/Instance of Child Class 'Nemo'
+Nemo1.name = 'Nemo';
+console.log(Nemo1.name);
 
 // function createNewPerson(name) {
 //     const Nemo = {};
