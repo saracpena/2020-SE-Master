@@ -11,7 +11,7 @@ class Circle{
       this.radius = radius;
     }
     circle_area(){
-      console.log(Math.PI * this.radius * 2);
+      return (Math.PI * Math.pow(this.radius,2));
     }
     total_sides(){
       console.log("Total sides of Circle: 0");
@@ -19,9 +19,8 @@ class Circle{
   }
 
 let circle = new Circle(5);
-circle.area = 5
-circle.total_sides = 5
-console.log(circle);
+console.log(circle.circle_area());
+
 
 
 //2. Define a new class called Rectangle with appropriate attributes and instantiate a few Rectangle objects.
