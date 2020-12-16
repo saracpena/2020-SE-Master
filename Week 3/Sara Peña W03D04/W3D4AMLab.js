@@ -5,15 +5,13 @@
 // Create a class Nemo that inherits from Fish ^
 // Define an attribute color ^
 // Create a Nemo object. Can it swim? 
-// Find the difference between abstract class and an interface
-// Which of the two can have implementation of a method in the class?
+
 
 class Fish {//Parent Class 'Fish'
-  constructor(name){
-    this.name = name;
+  constructor(){//don't need name
   } 
   Swim(){
-      console.log("Can swim");
+      console.log("I can swim");
     }
   }
 
@@ -21,13 +19,13 @@ class Nemo extends Fish{//Child Class of Class 'Fish'
     constructor(color){
       super();//used to access the object's parent i.e. 'SUPER CLASS' aka 'FISH', must go before the 'this'.attribute
       this.color = color;
-
     }
 }
-
 let Nemo1 = new Nemo('Orange');//Object/Instance of Child Class 'Nemo'
-Nemo1.name = 'Nemo';
-console.log(Nemo1.name);
+console.log(Nemo1);
+Nemo1.Swim();
+
+
 
 // function createNewPerson(name) {
 //     const Nemo = {};
@@ -54,3 +52,12 @@ console.log(Nemo1.name);
 // }
 // var Nemoo = new Nemo("purple");
 // Nemoo.swim();
+
+// Find the difference between abstract class and an interface
+
+//The difference between class and interface,
+//ABSTRACT classes - are classes which can have ABSTRACT METHODS which are methods with declaration
+//only
+
+
+// Which of the two can have implementation of a method in the class?

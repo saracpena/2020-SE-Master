@@ -9,7 +9,7 @@
     //of the snack and then that snack will be returned
 // Be able to call vendingMachine.vend() with a valid integer to return a snack
 
-var VendingMachine = {
+var VendingMachine = {//MAP DATA STRUCTURE
     snacks: [
         {name:"Crunch", code:"A01", quantity:10, price:0.60},
         {name:"Milky Way", code:"A02", quantity:5, price:0.60},
@@ -22,3 +22,23 @@ var VendingMachine = {
  } 
 }           
  console.log(VendingMachine.vend(0));
+
+ //VENDING MACHINE based on above requirments:
+ class Snack{//condos
+    constructor(name, price){
+        this.name = name;
+        this.price;
+    }
+ }//creating a protoype/blueprint
+
+ class VendingMachine{//gated community
+    constructor(snacks){
+        this.snacks = snacks;
+    }
+    vend (snackIndex){
+        return this.snacks[snackIndex];
+    }
+ }
+
+ 
+
