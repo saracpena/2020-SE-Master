@@ -112,3 +112,15 @@ const orderSunglasses = () => {// Create a function, orderSunglasses() w/ no par
 const orderPromise = orderSunglasses();// Create a variable orderPromise assigned to the returned value of your orderSunglasses()
 
 console.log(orderPromise);// At the bottom of your app.js file, log orderPromise to the console.
+
+
+//THE NODE setTimeout() Function
+
+//knowing how to consume, or use, promises will be key.
+
+//Rather than constructing promises, you’ll be handling Promise objects returned to you as the result of an asynchronous operation.
+
+//setTimeout() is a Node API (a comparable API is provided by web browsers) 
+//that uses callback functions to schedule tasks to be performed after a delay. 
+//setTimeout() has two parameters: a callback function and a delay in milliseconds.
+
