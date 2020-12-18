@@ -100,6 +100,21 @@ console.log(increaseByTwo); // -> should print [3, 4, 5, 6, 7];
 
 //Challenge: EVALUATING KEYS ==============================================
 
+const sumMe = {
+  hello: 'there',
+  you: 8,
+  are: 7,
+  almost: '10',
+  done: '!'
+};
+let total = 0;
+// ADD CODE HERE
+for (const property in sumMe) {
+        if (typeof sumMe[property] === 'number') {
+      total += sumMe[property];
+    }
+}
+console.log(total);
 
 //Challenge: OBJECTS - ADDING PROPERTIES ===================================
 
