@@ -21,3 +21,5 @@ promise.then(
        console.log("bad request");
     }
 );
+
+//API is like a username/password
