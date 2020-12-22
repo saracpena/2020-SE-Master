@@ -1,24 +1,20 @@
-// $('#input-box').val()
-
-//WAY 1:
-// $('#submit-btn').on('click' , () => {
-//     console.log($('#input-box').val());//show value of what is input on text box
-// })
-
-//WAY 2:
-// $('form').on('submit', (event) => {//I removed id = submit-btn
-//     console.log($('#input-box').val());//show value of what is input on text box
-//     event.preventDefault();
+// Way 1
+// $('#submit-btn').on('click', () => {
+//   console.log($('#input-box').val());
 // });
 
-//WAY 3:
-// $(elem).trigger('reset') not needed here
-$('form').on('submit', (e) => {//I removed id = submit-btn
-    console.log($('#input-box').val());//show value of what is input on text box
-    e.preventDefault();
-    $(e.currentTarget).trigger('reset');//resets input field to "placeholder
-});
+// Way 2
+// $('form').on('submit', (event) => {
+//   console.log($('#input-box').val());
+//   event.preventDefault();
+// });
 
+// Way 3
+$('form').on('submit', (e) => {
+    console.log($('#input-box-fn').val());
+    e.preventDefault();
+    $(e.currentTarget).trigger('reset');
+  });
 
 
 // console.log('stranger things are coming');
