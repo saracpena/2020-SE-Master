@@ -1,15 +1,23 @@
 // $('#input-box').val()
 
+//WAY 1:
 // $('#submit-btn').on('click' , () => {
 //     console.log($('#input-box').val());//show value of what is input on text box
 // })
 
-//VERSES NEXT CODE:
-$('form').on('submit', (event) => {//I removed id = submit-btn
-    console.log($('#input-box').val());//show value of what is input on text box
-    event.preventDefault();
-})
+//WAY 2:
+// $('form').on('submit', (event) => {//I removed id = submit-btn
+//     console.log($('#input-box').val());//show value of what is input on text box
+//     event.preventDefault();
+// });
 
+//WAY 3:
+// $(elem).trigger('reset') not needed here
+$('form').on('submit', (e) => {//I removed id = submit-btn
+    console.log($('#input-box').val());//show value of what is input on text box
+    e.preventDefault();
+    $(e.currentTarget).trigger('reset');//resets input field to "placeholder
+});
 
 
 
