@@ -24,19 +24,23 @@ console.log($closeBtn);
 
 const openModal = () => {
     $modal.css('display', 'block');
-    //$modal.show() also works
+    //modal.style.display='block'
+    //$modal.show() //also works also works as a simplified version of $modal.css('display', 'block');
+    //$modal.width()
 }
 
 // Event handler to close the modal, this is doing the opposite - changing display to 'none'
 
 const closeModal = () => {
     $modal.css('display', 'none');
-    //$modal.hide() also works
+    //modal.style.display='none' //
+    //$modal.hide() //also works as a simplified version of $modal.css('display', 'none');
 }
 
 // Add event listener to About the Game button
 
 $openBtn.on('click', openModal);
+document.querySelector('#openModal').addEventListener('click', openModal);
 
 
 // Add event listener to Close button, 
