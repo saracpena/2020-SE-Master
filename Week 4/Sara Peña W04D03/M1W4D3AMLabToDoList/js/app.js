@@ -1,10 +1,13 @@
 
 const todos = [];
-$('#add').on('click', (e) => {
+const done = [];
+$('form').on('#add', (e) => {
   console.log($('#task').val());
 
   todos.push($('#task').val());
-  console.log(todos);
+  // list.push($('#input-box-mn').val());
+  // list.push($('#input-box-ln').val());
+  console.log(todos); //test it
   e.preventDefault();
 
   $(e.currentTarget).trigger('reset');
@@ -15,13 +18,15 @@ const render = () => { //prints the item
   // $('ul').empty();
   // list.forEach((item) => { //it iterates the array
   //     console.log(item);
-  $('ul').append('<li>' + list[list.length - 1] + '</li>');
+  $('ul').append('<li>' + todos[todos.length - 1] + '</li>');
   // });
   $('li').on('click', (e) => {
 
       $(e.currentTarget).css('text-decoration', 'line-through');
       $(e.currentTarget).effect('shake');
   });
+
+  
 
 // $(function() {
 //   $("#add").on("click", function() {

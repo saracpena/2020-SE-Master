@@ -11,7 +11,7 @@
 
 // Way 3
 const list = [];
-
+//this is called: EVENT HANDLER: $(.submit).on(‘click, function() { code }
 $('form').on('submit', (e) => {
     console.log($('#input-box-fn').val());
 
