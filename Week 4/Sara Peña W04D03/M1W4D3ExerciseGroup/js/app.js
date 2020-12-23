@@ -10,7 +10,6 @@
 // });
 
 // Way 3
-
 const list = [];
 
 $('form').on('submit', (e) => {

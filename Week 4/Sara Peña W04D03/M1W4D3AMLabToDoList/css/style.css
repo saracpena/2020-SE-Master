@@ -1,10 +1,29 @@
 h1 {
   color: #1abc9c;
+  text-align: center;
+  
 }
+
+
 .rem {
   margin-left: 5px;
   background-color: white;
   color: red;
   border: none;
   cursor: pointer;
+}
+
+li {
+  width: 300px;
+  height: 60px;
+  background-color: #6495ED;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 15px;
+  list-style-type:none;
+}
+
+h3 {
+  display: inline-block;
+  padding: 30px;
 }
