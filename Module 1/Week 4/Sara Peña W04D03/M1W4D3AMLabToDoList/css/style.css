@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
   color: #1abc9c;
   text-align: center;
   
@@ -26,4 +26,83 @@ li {
 h3 {
   display: inline-block;
   padding: 30px;
+}
+body {
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+
+h1,h2 {
+	text-align: center;
+} */
+
+/*styles for top controls*/
+#item-add-container {
+	display: flex;
+	justify-content: center;
+}
+#task-input {
+	width: 33vw;
+    border-color: lightgray;
+    border-style: solid;
+}
+#add-button {
+	background-color: #b4201b;
+	margin-left: .5rem;
+	padding: .5rem 2.5rem;
+    color: floralwhite;
+    border: none;
+}
+
+/*styles for lists*/
+#tasks-wrapper {
+	display: flex;
+	justify-content: space-evenly;
+}
+.list-wrapper {
+	width: 40vw;
+}
+ul {
+	list-style: none;
+	padding: unset;
+}
+
+/* styles on the li's*/
+.list-item {
+	height: 5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+
+    border: solid grey .2rem;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+
+    font-size: 130%;
+    color: floralwhite;
+}
+.list-item::before {
+	content: "X";
+	position: relative;
+	left: -10rem;
+}
+
+.to-do-item {
+	background-color: #6293f0;
+}
+
+.done-item {
+	background-color: #ED6495;
+}
+
+.done-item span{
+	text-decoration: line-through;
+	/*text-decoration-thickness not support on my version of chrome*/
+}
+
+.list-item-control {
+	border: none;
+    border-radius: .2rem;
+    font-family: inherit;
+    padding: .3rem;
 }
