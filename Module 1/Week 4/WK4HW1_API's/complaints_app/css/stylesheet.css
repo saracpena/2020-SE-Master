@@ -1,0 +1,59 @@
+#num-requests {
+	width: 5rem;
+}
+
+#borough-selectors {
+	margin-top: 1rem;
+}
+
+#borough-selectors > input {
+	display: none;
+}
+
+#borough-selectors > label {
+	font-size: 1.3rem;
+    margin-right: .5rem;
+    border: black solid 1px;
+    border-radius: 2px;
+    padding: .1rem 5px;
+    cursor: pointer;
+}
+
+#borough-selectors > label:hover {
+	background-color: rgb(173,255,47,.5);
+}
+
+#borough-selectors > input:checked + label {
+    background-color: greenyellow;
+}
+
+.borough-heading {
+	text-transform: capitalize;
+}
+
+.entry {
+	margin-bottom: 1rem;
+	padding-left: 1rem;
+}
+.description {
+	display: inline-block;
+	width: 20rem;
+}
+
+.toggle-button {
+	padding: .1rem .3rem;
+	outline: none;
+    border: none;
+    background-color: lightgrey;
+    border-radius: .2rem;
+}
+
+.toggle-button:hover {
+	background-color: rgb(211,211,211,.7);
+}
+
+.response {
+	margin-left: 1rem;
+	margin-top: .75rem;
+}
+
