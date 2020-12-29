@@ -24,31 +24,86 @@
 
 //* SHIP PROPERTIES
 //TODO: 'hull' is the same as hitpoints. If hull reaches 0 or less, the ship is destroyed.
-    let hull;
-    for(hull = 0; hull<=0; hull++){
+//?LOOP? i.e.
+    // let hull;
+    // for(hull = 0; hull<=0; hull++){
 
-    }
-
-//TODO: 'firepower' is the amount of damage done to the 'hull' of the target with a successful hit.
-
-//TODO: 'accuracy' is the chance between 0 and 1 that the ship will hit its target.
+    // }
 
 //! SPACE SHIP BUILD//
-//TODO: 'hull' - 20
-//TODO: 'firepower' - 5
-//TODO: 'accuracy' - .7
+//TODO: 'hull' - 20 //the same as hitpoints. If hull reaches 0 or less, the ship is destroyed.
+//TODO: 'firepower' - 5 //the amount of damage done to the 'hull' of the target with a successful hit.
+//TODO: 'accuracy' - .7 //the chance between 0 and 1 that the ship will hit its target.
+// CREATE CAPTAIN OBJECT
+//!Math.random() - returns a floating-point, pseudo-random number in the range 0 to less than 1, which you can then scale to your desired range
+console.log('window is loaded');
+
+//const captain instead of 
+const captain = {//TODO: 'captain' is the [OBJECT] followed by its properties,
+    hull: 20,
+    firepower: 5,
+    accuracy: .7,
+    isAlive: true,
+    attack(target){
+        let ranNum = Math.random();//!Random number but 'window.crypto.getRandomValues()' is crypted for security
+        console.log(`Accuracy threshold is ${ranNum}`);
+        if (ranNum < this.accuracy) {//!'this' is directed @ captain's[object] accuracy
+            console.log(`Nice shot, Captan!`);
+            target.hull = target.hull - this.firepower;
+            console.log(`Alien has ${target.hull} hull points left.`);
+            if (target.hull <= 0) {
+                target.isAlive = false;
+                console.log(`You've saved us from those pesky Aliens, once again! Thank you, Captain!`);
+            }
+        } else {
+            console.log(`You Missed!`);
+        }
+    }
+}
 
 //! ALIEN SHIP BUILD
 //TODO: 'hull' -  between 3 and 6 
 //TODO: 'firepower' - between 2 and 4
 //TODO: 'accuracy' -  between .6 and .8
+const alien = {
+    hull: Math.floor(Math.random() * 6) + 3,
+    firepower: Math.floor(Math.random() * 4) + 2,
+    accuracy: Math.floor(Math.random() * .8) + .6,//update to make it to the hundredth?
+    isAlive: true,
+    attack(target) {
+        let ranNum = Math.random();
+        console.log(`Accuracy threshold is ${ranNum}`);
+        if (ranNum < this.accuracy) {
+            console.log(`You've been hit!`);
+            target.hull = target.hull - this.firepower;
+            console.log(`hero has ${target.hull} hull points left.`);
+            if (target.hull <= 0) {
+                target.isAlive = false;
+                console.log(`GAME OVER!`);
+            }
+        } else {
+            console.log(`Phew! That was close!`);
+        }
+    }
+}
+
+//! BATTLE BUILD - Let the games begin //
+const battle = (player, computer) => {//*These two params must be captain and alien
+    while (player.isAlive && computer.isAlive) {//*while loop determines 'when captain or computer attacks'
+        player.attack(computer);
+        if (computer.isAlive) {
+            computer.attack(player);
+        }
+    }
+}
+
 
 //!PLAYER
     //!ATTACK
 //!VILLAIN
     //!ATTACK
 
-
+battle()
 
 /**
  * MyMethod
