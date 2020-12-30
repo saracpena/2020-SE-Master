@@ -38,12 +38,12 @@
 //!Math.random() - returns a floating-point, pseudo-random number in the range 0 to less than 1, which you can then scale to your desired range
 console.log('window is loaded');
 
-//const captain instead of 
+//const captain instead of let/var
 const captain = {//TODO: 'captain' is the [OBJECT] followed by its properties,
     hull: 20,
     firepower: 5,
     accuracy: .7,
-    isAlive: true,
+    isAlive: true,//!current state
     attack(target){
         let ranNum = Math.random();//!Random number but 'window.crypto.getRandomValues()' is crypted for security
         console.log(`Accuracy threshold is ${ranNum}`);
@@ -61,15 +61,35 @@ const captain = {//TODO: 'captain' is the [OBJECT] followed by its properties,
     }
 }
 
+//?CAPTAIN CLASS OOP LAYOUT:
+
+// class captain {
+//     constructor(name, hull, firepower, accuracy){
+//         this.name = name;
+//         this.hull = hull;
+//         this.firepower = firepower;
+//         this.accuracy = accuracy;
+//     }
+
+// }
+
+//?ALIEN CLASS OOP LAYOUT EXTENDS/INHERITENCE:
+
+// class alien extends captain{
+//     constructor(name){
+
+//     }
+// }
+
 //! ALIEN SHIP BUILD
 //TODO: 'hull' -  between 3 and 6 
 //TODO: 'firepower' - between 2 and 4
 //TODO: 'accuracy' -  between .6 and .8
 const alien = {
-    hull: Math.floor(Math.random() * 6) + 3,
-    firepower: Math.floor(Math.random() * 4) + 2,
+    hull: Math.floor(Math.random() * 6) + 3,//any random # between 3 & 6
+    firepower: Math.floor(Math.random() * 4) + 2,//any random # between 2 & 4
     accuracy: Math.floor(Math.random() * .8) + .6,//update to make it to the hundredth?
-    isAlive: true,
+    isAlive: true,//current state, i.e. starting point
     attack(target) {
         let ranNum = Math.random();
         console.log(`Accuracy threshold is ${ranNum}`);
