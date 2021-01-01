@@ -4,11 +4,11 @@
     border: 1px solid grey;
     border-radius: 10px;
     display: inline-block;
-    transition: 1s;   
+    transition: 1s;
 }
+/*when hovering mouse over square*/
 .square:hover {
     height: 100px;
     width: 100px;
     transform: translateX(25px);
   }
-  

@@ -8,7 +8,6 @@
 //!Your strength is that you have the initiative and get to attack first. 
 //!However, you do not have targeting lasers and can only attack the aliens in order. 
 //!After you have destroyed a ship, you have the option to make a hasty retreat.
-//* BEGIN CODING HERE *//
 
 //* A game round would look like this:
 //! LOOP
@@ -36,7 +35,16 @@
 //TODO: 'accuracy' - .7 //the chance between 0 and 1 that the ship will hit its target.
 // CREATE CAPTAIN OBJECT
 //!Math.random() - returns a floating-point, pseudo-random number in the range 0 to less than 1, which you can then scale to your desired range
-console.log('window is loaded');
+//console.log('window is loaded');
+
+//* BEGIN CODING HERE *//
+
+//
+setTimeout(function() {
+    alert(
+      "Welcome to Sara's Space Battle page! - open the console log on the page to play. Hurry the fate of the planet is in your hands Captain!"
+    );
+  }, 5000);
 
 //const captain instead of let/var
 const captain = {//TODO: 'captain' is the [OBJECT] followed by its properties,
@@ -46,7 +54,7 @@ const captain = {//TODO: 'captain' is the [OBJECT] followed by its properties,
     isAlive: true,//!current state
     attack(target){
         let ranNum = Math.random();//!Random number but 'window.crypto.getRandomValues()' is crypted for security
-        console.log(`Accuracy threshold is ${ranNum}`);
+        console.log(`%c Accuracy threshold is ${ranNum}`, `font-size:18px; background:darkgreen; color:white; border: 4px dashed gold;`);//template literal accessing variable
         if (ranNum < this.accuracy) {//!'this' is directed @ captain's[object] accuracy
             console.log(`Nice shot, Captan!`);
             target.hull = target.hull - this.firepower;
@@ -62,6 +70,7 @@ const captain = {//TODO: 'captain' is the [OBJECT] followed by its properties,
 }
 
 //?CAPTAIN CLASS OOP LAYOUT:
+//TODO: COMPLETE THIS SECTION
 
 // class captain {
 //     constructor(name, hull, firepower, accuracy){
@@ -74,10 +83,13 @@ const captain = {//TODO: 'captain' is the [OBJECT] followed by its properties,
 // }
 
 //?ALIEN CLASS OOP LAYOUT EXTENDS/INHERITENCE:
+//TODO: COMPLETE THIS SECTION
 
 // class alien extends captain{
 //     constructor(name){
-
+//         hull = Math.floor(Math.random() * 6) + 3,
+//         firepower = Math.floor(Math.random() * 4) + 2,
+//         accuracy = Math.floor(Math.random() * .8) + .6,
 //     }
 // }
 
@@ -90,7 +102,7 @@ const alien = {
     firepower: Math.floor(Math.random() * 4) + 2,//any random # between 2 & 4
     accuracy: Math.floor(Math.random() * .8) + .6,//update to make it to the hundredth?
     isAlive: true,//current state, i.e. starting point
-    attack(target) {
+    attack(target) {//attack function rolls out as follows
         let ranNum = Math.random();
         console.log(`Accuracy threshold is ${ranNum}`);
         if (ranNum < this.accuracy) {
@@ -109,9 +121,9 @@ const alien = {
 
 //! BATTLE BUILD - Let the games begin //
 const battle = (player, computer) => {//*These two params must be captain and alien
-    while (player.isAlive && computer.isAlive) {//*while loop determines 'when captain or computer attacks'
+    while (player.isAlive && computer.isAlive){//*while loop determines 'when captain or computer attacks'
         player.attack(computer);
-        if (computer.isAlive) {
+        if (computer.isAlive) { 
             computer.attack(player);
         }
     }
@@ -123,7 +135,6 @@ const battle = (player, computer) => {//*These two params must be captain and al
 //!VILLAIN
     //!ATTACK
 
-battle()
 
 /**
  * MyMethod

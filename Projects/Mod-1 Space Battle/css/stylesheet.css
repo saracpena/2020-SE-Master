@@ -1,0 +1,46 @@
+body{
+    background-image: url("../Space.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#text{
+    color: greenyellow;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Bungee Outline', cursive;
+    font-size: 20px;
+    animation: leftright 2s;
+}
+h1{
+    background-color: yellow;
+    text-decoration: none;
+    color: blue;
+    padding: 5px;
+    transition: background-color 2s;
+}
+
+h2{
+    background-color: yellow;
+    display: inline;
+    height: 30px;
+    text-decoration: none;
+    color: red;
+    padding: 5px;
+    transition: background-color 2s;
+}
+
+h1:hover{
+    background-color: lightgreen;
+  }
+h2:hover{
+    background-color: lightgreen;
+  }
+
+ 
+  @keyframes leftright {
+    from{width: 0%;}
+    to{width: 100%;}
+  }
