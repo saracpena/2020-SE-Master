@@ -12,6 +12,8 @@ body{
     justify-content: space-evenly;
     font-family: 'Bungee Outline', cursive;
     font-size: 20px;
+
+    
     animation: leftright 2s;
 }
 h1{

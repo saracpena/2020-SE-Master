@@ -37,10 +37,12 @@
 //!Math.random() - returns a floating-point, pseudo-random number in the range 0 to less than 1, which you can then scale to your desired range
 //console.log('window is loaded');
 
-//* BEGIN CODING HERE *//
+//******* BEGIN CODING HERE *******//
 //!Battle Space story set-up
 
 console.log('%c Welcome to Space Battle, Captain!','font-size: 20px; font-style: italic; background: black; border: 2px solid grey; color: green;')
+
+//!ideas
 // console.log(
 //     " %c........ Welcome to the Space Battle! You are captian of the USS Schwarzenegger - and there are 7 evil alien ships headed to destroy Earth! ........ ",
 //     "font-size: 15px; background:black; border: 2px solid red; color:white;"
@@ -83,11 +85,11 @@ console.log('%c Welcome to Space Battle, Captain!','font-size: 20px; font-style:
 //   );
 
 //!JUST FOR FUN POP-UP
-// setTimeout(function() {
-//     alert(
-//       "Welcome to Sara's Space Battle page! - open the console log on the page to play. Hurry the fate of the planet is in your hands Captain!"
-//     );
-//   }, 1000);
+setTimeout(function() {
+    alert(
+      "Welcome to Sara's Space Battle page! - open the console log on the page to play. Hurry the fate of the planet is in your hands Captain!"
+    );
+  }, 10000);
 
 //!OPPONENT CLASS OOP BLUEPRINT: For Captain and Alien SpaceShips
 
