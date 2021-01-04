@@ -5,13 +5,13 @@
 //!Aliens' weakness is that they are too logical and attack one at a time
 //!they will wait to see the outcome of a battle before deploying another alien ship.
 
-//!Your strength is that you have the initiative and get to attack first. 
-//!However, you do not have targeting lasers and can only attack the aliens in order. 
+//!Your strength is that you have the initiative and get to attack first.
+//!However, you do not have targeting lasers and can only attack the aliens in order.
 //!After you have destroyed a ship, you have the option to make a hasty retreat.
 
 //* A game round would look like this:
 //! LOOP
-//TODO: Attack the first alien ship, 
+//TODO: Attack the first alien ship,
 //TODO: If the ship survives, it attacks you
 //TODO: If you survive, you attack the ship again
 
@@ -24,10 +24,9 @@
 //* SHIP PROPERTIES
 //TODO: 'hull' is the same as hitpoints. If hull reaches 0 or less, the ship is destroyed.
 //?LOOP? i.e.
-    // let hull;
-    // for(hull = 0; hull<=0; hull++){
-
-    // }
+// let hull;
+// for(hull = 0; hull<=0; hull++){
+// }
 
 //! SPACE SHIP BUILD//
 //TODO: 'hull' - 20 //the same as hitpoints. If hull reaches 0 or less, the ship is destroyed.
@@ -40,7 +39,10 @@
 //******* BEGIN CODING HERE *******//
 //!Battle Space story set-up
 
-console.log('%c Welcome to Space Battle, Captain!','font-size: 20px; font-style: italic; background: black; border: 2px solid grey; color: green;')
+console.log(
+  "%c Welcome to Space Battle, Captain!",
+  "font-size: 20px; font-style: italic; background: black; border: 2px solid grey; color: green;"
+);
 
 //!ideas
 // console.log(
@@ -85,77 +87,105 @@ console.log('%c Welcome to Space Battle, Captain!','font-size: 20px; font-style:
 //   );
 
 //!JUST FOR FUN POP-UP
-setTimeout(function() {
-    alert(
-      "Welcome to Sara's Space Battle page! - open the console log on the page to play. Hurry the fate of the planet is in your hands Captain!"
-    );
-  }, 10000);
+// setTimeout(function () {
+//   alert(
+//     "Welcome to Sara's Space Battle page! - open the console log on the page to play. Hurry the fate of the planet is in your hands Captain!"
+//   );
+// }, 5000);
 
 //!OPPONENT CLASS OOP BLUEPRINT: For Captain and Alien SpaceShips
 
 class Player {
-    constructor(name, hull, firepower, accuracy){
-        this.name = name;
-        this.hull = hull;
-        this.firepower = firepower;
-        this.accuracy = accuracy;
-    }
+  constructor(name, hull, firepower, accuracy) {
+    this.name = name;
+    this.hull = hull;
+    this.firepower = firepower;
+    this.accuracy = accuracy;
+  }
 }
 
 //!Captain & Alien - CLASS OOP BLUEPRINT EXTENDS/INHERITENCE with keyword 'new'
 
-let Captain = new Player('captain', 20, 5, .7)
+let Captain = new Player("captain", 20, 5, 0.7);
 console.log(Captain);
 
 //!Loop through alien spaceships, create array.
 
-const alienArr = []
-for(let i = 1; i <= 6; i++){
-    //TODO: Setup Alien Properties
-    //!Alien Hull @ random
-    let alienHull = Math.floor(Math.random() * 6) + 3;
-    //!Alien Firepower @ random
-    let alienFirePower = Math.floor(Math.random() * 4) + 2;
-    //!Alien Accuracy @ random
-    let alienAccuracy = Math.floor(Math.random() * .8) + .6;
-    //TODO: 'new' Alien i.e. Inheritance/Extends from Opponent object above
-    let Alien = new Player('alien', alienHull, alienFirePower, alienAccuracy)
-    //!Battle each alien one at a time from alienArr
-    alienArr.push(Alien);
-};
+const alienArr = [];
+for (let i = 1; i <= 6; i++) {
+  //TODO: Setup Alien Properties
+  //!Alien Hull @ random
+  let alienHull = Math.floor(Math.random() * 6) + 3;
+  //!Alien Firepower @ random
+  let alienFirePower = Math.floor(Math.random() * 4) + 2;
+  //!Alien Accuracy @ random
+  let alienAccuracy = Math.floor(Math.random() * 0.8) + 0.6;
+  //TODO: 'new' Alien i.e. Inheritance/Extends from Opponent object above
+  let Alien = new Player("alien", alienHull, alienFirePower, alienAccuracy);
+  //!Battle each alien one at a time from alienArr
+  alienArr.push(Alien);
+}
 console.log(alienArr);
 
 //!Loop through length of Battle (Six Aliens) i.e. alienArr.length
 //TODO: WHILE LOOP
-while (alienArr.length > 0) {
-    let aliensLeft = alienArr.pop();//!removes the last element from alienArr and returns that element
+function loadGame (){
+  while (alienArr.length > 0) {
+    let aliensLeft = alienArr.pop(); //!removes the last element from alienArr and returns that element
     if (Math.random() < aliensLeft.accuracy) {
-      console.log("%c You've been hit!", "font-weight: bold; font-size: 15px; font-variant: small-caps; color: red");
+      console.log(
+        "%c You've been hit!",
+        "font-weight: bold; font-size: 15px; font-variant: small-caps; color: red"
+      );
       Captain.hull = Captain.hull - aliensLeft.firepower;
       console.log(Captain.hull);
     } else if (Math.random() > aliensLeft.accuracy) {
-      console.log(`%c Nice shot! ${Captain.firepower} damage!`, "font-style: italic; font-variant: small-caps; text-transform: capitalize; font-size: 20px; background: black; border: 1px solid red; color: yellow;");
+      console.log(
+        `%c Nice shot! ${Captain.firepower} damage!`,
+        "font-style: italic; font-variant: small-caps; text-transform: capitalize; font-size: 20px; background: black; border: 1px solid red; color: yellow;"
+      );
       console.log(aliensLeft.hull - Captain.firepower);
-    } console.log("%c Enemy down!", "font-weight: bold; font-variant: small-caps; font-size: 15px; font-variant: small-caps; color: blue");
+    }
+    console.log(
+      "%c Enemy down!",
+      "font-weight: bold; font-variant: small-caps; font-size: 15px; font-variant: small-caps; color: blue"
+    );
     //!Checks the player's health to determine game vitality
     if (Captain.hull <= 0) {
-      console.log("%c We've been defeated!", "font-weight: bold; font-variant: small-caps; font-size: 15px; background: red; border: 1px solid red; color: white");
+      console.log(
+        "%c We've been defeated!",
+        "font-weight: bold; font-variant: small-caps; font-size: 15px; background: red; border: 1px solid red; color: white"
+      );
       break;
-    }; //!Asks if the player wants to continue battling
-    var cont = prompt("Continue: Yes/No?").toLowerCase()
+    } //!Asks if the player wants to continue battling
+    var cont = prompt("Continue: Yes/No?").toLowerCase();
     console.log(cont);
-    if ( cont === 'no') {
-      console.log("%c Don't go! The weight of the world is on your shoulders!", "font-weight: bold; font-size: 15px; font-variant: small-caps; color: red");
+    if (cont === "no") {
+      console.log(
+        "%c Don't go! The weight of the world is on your shoulders!",
+        "font-weight: bold; font-size: 15px; font-variant: small-caps; color: red"
+      );
       break;
     }
-  };
-  
-    
-//!End game if Captain wins!
-if (Captain.hull > 0 && alienArr.length == 0) {
-    console.log("%c You've saved us from those pesky Aliens . Thank you, Captain!", "background: azure; border: 1px solid grey; text-transform: capitalize; font-weight: bold; font-style: italic; font-variant: small-caps; background: blue; color: gold; font-size: 15px");
   }
+//!End game if Captain wins!
+  if (Captain.hull > 0 && alienArr.length == 0) {
+    console.log(
+      "%c You've saved us from those pesky Aliens . Thank you, Captain!",
+      "background: azure; border: 1px solid grey; text-transform: capitalize; font-weight: bold; font-style: italic; font-variant: small-caps; background: blue; color: gold; font-size: 15px"
+    );
+  }
+}
 
+window.onload = (event) => {
+  setTimeout(function(){
+    var play = prompt("Play Game: Yes/No?").toLowerCase();
+    if (play === "yes"){
+      console.log("Let the games begin!");
+    loadGame()
+    }
+  }, 2010)
+};
 
 /**
  * MyMethod
@@ -163,7 +193,7 @@ if (Captain.hull > 0 && alienArr.length == 0) {
  * ! Dep method
  * ?Should?
  * TODO:
-*/
+ */
 
 //======= WORKING THRU IT ======================================================================
 //const captain instead of let/var
@@ -189,7 +219,7 @@ if (Captain.hull > 0 && alienArr.length == 0) {
 //     }
 // }
 //! ALIEN SHIP BUILD
-//TODO: 'hull' -  between 3 and 6 
+//TODO: 'hull' -  between 3 and 6
 //TODO: 'firepower' - between 2 and 4
 //TODO: 'accuracy' -  between .6 and .8
 // const alien = {
@@ -224,7 +254,7 @@ if (Captain.hull > 0 && alienArr.length == 0) {
 // const battle = (player, computer) => {//*These two params must be captain and alien
 //     while (player.isAlive && computer.isAlive){//*while loop determines 'when captain or computer attacks'
 //         player.attack(computer);
-//         if (computer.isAlive) { 
+//         if (computer.isAlive) {
 //             computer.attack(player);
 //         }
 //     }

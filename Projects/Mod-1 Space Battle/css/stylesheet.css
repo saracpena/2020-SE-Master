@@ -12,10 +12,9 @@ body{
     justify-content: space-evenly;
     font-family: 'Bungee Outline', cursive;
     font-size: 20px;
-
-    
     animation: leftright 2s;
 }
+
 h1{
     background-color: yellow;
     text-decoration: none;
@@ -41,7 +40,6 @@ h2:hover{
     background-color: lightgreen;
   }
 
- 
   @keyframes leftright {
     from{width: 0%;}
     to{width: 100%;}
