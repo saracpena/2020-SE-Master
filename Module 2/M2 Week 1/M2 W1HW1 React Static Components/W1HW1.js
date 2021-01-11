@@ -23,6 +23,7 @@ class App extends React.Component {
         <h3>Customers</h3>
         <h3>Online Analysis</h3>
         <h3>Settings</h3>
+        
       </div>
       )}
   };
@@ -38,6 +39,7 @@ class App extends React.Component {
           <div id="rev">
               <h2>Average Rating</h2>
               <h3>4.6</h3>
+              <img id='img1' src="5 Stars.png"/>
           </div>
           <div id="rev">
               <h2>Sentiment Analysis</h2>
@@ -56,7 +58,7 @@ class App extends React.Component {
       <div id="visitors">
           <div id="vis">
               <h2>Website Visitors</h2>
-              <h3>821</h3>
+              <h1>821</h1>
   
           </div>
           <div id="vis">
