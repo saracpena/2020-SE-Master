@@ -9,7 +9,7 @@ main{
     display: grid;
     grid-template-areas:
     "sidebar reviews"
-    "sidebar visitors"    ;
+    "sidebar visitors"  ;
     grid-template-columns: 25;
     grid-template-rows: auto;
     grid-gap: 1.2% 1.2%;
