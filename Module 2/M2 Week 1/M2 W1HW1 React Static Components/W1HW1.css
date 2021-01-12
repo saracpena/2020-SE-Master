@@ -12,7 +12,7 @@ main{
     "sidebar visitors"  ;
     grid-template-columns: 25;
     grid-template-rows: auto;
-    grid-gap: 1.2% 1.2%;
+    grid-gap: 1.2% 1.2%; 
     font-family: 'Bebas Neue', cursive;
     text-align: center;
     border: solid rgb(80, 77, 77);
