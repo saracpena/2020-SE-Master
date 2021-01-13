@@ -1,3 +1,54 @@
+//! DATA //
+const receipts = [
+    {
+      person: 'Karolin',
+      order: {
+        main: 'Burrito',
+        protein: 'Organic Tofu',
+        rice: 'Purple Rice',
+        sauce: 'Green Crack',
+        toppings: [
+          'Baby Bok Choy', 'Cucumber Kimchi'
+        ],
+        drink: 'Horchata',
+        cost: 22
+      },
+      paid: false
+    },
+    {
+      person: 'Mark',
+      order: {
+        main: 'Rice Bowl',
+        protein: 'Ginger Soy Chix',
+        rice: 'Sticky Rice',
+        sauce: 'Korilla',
+        toppings: [
+          'Yuzu Pickled Sweet Pepper', 'Kale'
+        ],
+        drink: 'Horchata',
+        cost: 19
+      },
+      paid: false
+    },
+    {
+      person: 'Matt',
+      order: {
+        main: 'Salad Bowl',
+        protein: 'Organic Tofu',
+        rice: 'none',
+        sauce: "K'lla",
+        toppings: [
+          'Blue Potato Salad', 'Pico De Gallo', 'Red Kimchi'
+        ],
+        drink: 'Sparkling Blood Orange Soda',
+        cost: 20
+      },
+      paid: true
+    }
+  ]
+  
+  // const receipts = [receipt1, receipt2, receipt3];
+
 //! COMPONENTS //
 // console.log(receipts);
 // console.log(receipts[0].order);
@@ -12,6 +63,7 @@ class App extends React.Component {
     //   this.state.receipts.forEach(element => {
     //       console.log(element);
     //   });
+      const styles = {color:'rgb(180, 50, 201)'}
       return(
           <div>
               <h1 className="truck-name">Korilla</h1>
@@ -43,3 +95,8 @@ class Receipt extends React.Component {
         )
     }
 }
+
+ReactDOM.render(
+    <App />,
+    document.querySelector('.container')
+  )
