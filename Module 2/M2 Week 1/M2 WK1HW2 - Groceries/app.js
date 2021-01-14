@@ -1,3 +1,7 @@
+//! You call the setState method within your component class like so: this.setState(), 
+//! passing in an object with key-value pairs. The keys are your state properties and 
+//! the values are the updated state data. 
+
 class App extends React.Component {
     state = {
         groceries,

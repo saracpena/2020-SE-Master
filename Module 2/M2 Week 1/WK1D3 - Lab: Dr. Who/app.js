@@ -33,35 +33,35 @@ class App extends React.Component {
     }
     render() {
         return (<div onClick= { () => this.changeIt(this.state.tardis.name)}>
-            <DivOne datta={this.state.tardis.name}/>
+            <DivOne data={this.state.tardis.name}/>
         </div>)
     }
   }
   class DivOne extends React.Component {
     render() {
         return (<div>
-            <DivTwo datta={this.props.datta}/>
+            <DivTwo data={this.props.data}/>
         </div>)
     }
   }
   class DivTwo extends React.Component {
     render() {
         return (<div>
-            <DivThree datta={this.props.datta}/>
+            <DivThree data={this.props.data}/>
         </div>)
     }
   }
   class DivThree extends React.Component {
     render() {
         return (<div>
-            <DivFour datta={this.props.datta}/>
+            <DivFour data={this.props.data}/>
         </div>)
     }
   }
   class DivFour extends React.Component {
     render() {
         return (<div>
-            <h3>{this.props.datta}</h3>
+            <h3>{this.props.data}</h3>
         </div>)
     }
   }
