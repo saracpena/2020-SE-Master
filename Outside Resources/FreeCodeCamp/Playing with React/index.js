@@ -21,7 +21,7 @@ function MyApp() {
  )
 }
 
-  //what do I want to render, where do I want to render it
+  //! APP = what do I want to render, document.querySelector = where do I want to render it
 ReactDOM.render(
     <MyApp />,//creating an instance of my function 
     document.getElementById("root"))

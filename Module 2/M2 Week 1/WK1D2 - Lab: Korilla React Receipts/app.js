@@ -52,6 +52,7 @@ const receipts = [
 //! COMPONENTS //
 // console.log(receipts);
 // console.log(receipts[0].order);
+
 class App extends React.Component {
     state = {
             // receipt1: receipt1,
@@ -63,12 +64,11 @@ class App extends React.Component {
     //   this.state.receipts.forEach(element => {
     //       console.log(element);
     //   });
-      const styles = {color:'rgb(180, 50, 201)'}
       return(
           <div>
               <h1 className="truck-name">Korilla</h1>
               <div>
-                {this.state.receipts.map( (receipt) => !receipt.paid ? <Receipt receipt= {receipt}/> : "")}
+                {this.state.receipts.map( (receipt) => !receipt.paid ? <Receipt receipt= {receipt}/> : null)}
                         {/* {!this.state.receipt2.paid ? <Receipt receipt= {this.state.receipt2}/> : ""}
                         {!this.state.receipt3.paid ? <Receipt receipt= {this.state.receipt3}/> : ""} */}
                 {/* <Receipt /> */}
@@ -77,6 +77,7 @@ class App extends React.Component {
       )
   }
 }
+
 class Receipt extends React.Component {
     render () {
         console.log(this.props);
@@ -95,6 +96,10 @@ class Receipt extends React.Component {
         )
     }
 }
+
+
+//! Defining a component in this way creates a stateless functional component
+//! think of a stateless component as one that can receive data and render it, but does not manage or track changes to that data.
 
 ReactDOM.render(
     <App />,
