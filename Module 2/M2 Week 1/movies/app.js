@@ -19,11 +19,14 @@ class App extends React.Component {
         }, () => {
           fetch(this.state.searchURL)
             .then(response => {
+              //! returns in JSON
               return response.json()
             }).then(json => this.setState({
               movie: json,
+              //!clearing the field for new entry below,
               movieTitle: ''
             }),
+        //! Outputs an error message to the Web Console.
             err => console.log(err))
         })
       }
@@ -74,6 +77,3 @@ class App extends React.Component {
     <App />,
     document.querySelector('.container')
   )
-
-  
-  
