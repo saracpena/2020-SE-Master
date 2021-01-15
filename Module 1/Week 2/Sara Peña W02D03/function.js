@@ -1,8 +1,15 @@
 //function==============
-// function theSum(x,y){
-//     return x+y;
-//     console.log(x+y);//test
-// };
+function theSum(x,y){
+    return x+y;
+    console.log(x+y);//test
+}; console.log(theSum(2,4))//! calling/invoking
+
+//anonymous function sans name
+setTimeout(() => {
+  return theSum(2,4)
+}, 5000);//! replace "timeout placeholder"
+
+
 
 // //Main ==================
 // var sum;
