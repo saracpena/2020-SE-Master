@@ -62,6 +62,20 @@ class App extends React.Component {
         </div>)
     }
   }
+// class DivThree extends React.Component {
+//     render () {
+//         return(
+//         <div onClick= {() => this.changeIt(this.state.tardis.name)}>
+//             <div>
+//              <h3>Welcome to </h3>
+//             </div>
+//              <div onClick= { () => this.changeIt(this.state.tardis.name)}>
+//              <h3>Tardis</h3>
+//             </div>
+//         </div>
+//         )
+//     }
+// }
   class DivFour extends React.Component {
     render() {
         return (<div>
