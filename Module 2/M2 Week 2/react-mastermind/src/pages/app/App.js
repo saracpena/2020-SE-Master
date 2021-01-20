@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import GameBoard from '../../components/GameBoard/GameBoard';
-import ColorPicker from '../../components/ColorPicker/ColorPicker';
-import GameTimer from '../../components/GameTimer/GameTimer';
-import NewGameButton from '../../components/NewGameButton/NewGameButton';
 import GamePage from '../../pages/GamePage/GamePage';
 import SettingsPage from '../../pages/SettingsPage/SettingsPage';
 
@@ -164,27 +160,6 @@ class App extends Component {
             <SettingsPage {...props}/>
           } />
         </Switch>
-
-        <div className="flex-h align-flex-end">
-          <GameBoard
-            colors={colors}
-            guesses={this.state.guesses}
-            handlePegClick={this.handlePegClick}
-            handleScoreClick={this.handleScoreClick}
-          />
-          <div className='App-controls'>
-            <ColorPicker
-              colors={colors}
-              selColorIdx={this.state.selColorIdx}
-              handleColorSelection={this.handleColorSelection}
-            />
-            <GameTimer />
-            <NewGameButton handleNewGameClick={this.handleNewGameClick}/>
-          </div>
-        </div>
-        <footer className='App-header-footer'>
-          {(winTries ? `You Won in ${winTries} Guesses!` : 'Good Luck!')}
-        </footer>
       </div>
     );
   }

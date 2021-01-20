@@ -3,6 +3,7 @@ import GameBoard from '../../components/GameBoard/GameBoard';
 import ColorPicker from '../../components/ColorPicker/ColorPicker';
 import GameTimer from '../../components/GameTimer/GameTimer';
 import NewGameButton from '../../components/NewGameButton/NewGameButton';
+import {Link} from 'react-router-dom'
 
 const GamePage = (props) => {
     
@@ -23,6 +24,7 @@ const GamePage = (props) => {
               handleColorSelection={props.handleColorSelection}
             />
             <GameTimer />
+            <Link className='btn btn-default' to='/settings'>Difficulty</Link>
             <NewGameButton handleNewGameClick={props.handleNewGameClick}/>
           </div>
         </div>
