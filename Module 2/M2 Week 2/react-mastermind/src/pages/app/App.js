@@ -143,7 +143,7 @@ class App extends Component {
         <header className='App-header-footer'>R E A C T &nbsp;&nbsp;&nbsp;  M A S T E R M I N D</header>
         
         <Switch>
-          <Route exact path='/timer' render={() => 
+          <Route exact path='/' render={() => 
             <GamePage 
                 winTries={winTries}
                 colors={colors}
