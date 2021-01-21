@@ -155,7 +155,6 @@ class App extends Component {
                 handleScoreClick={this.handleScoreClick}
             />
           } />
-
         <Route path='/settings' render={(props) => 
             <SettingsPage {...props}/>
           } />
