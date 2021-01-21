@@ -15,7 +15,7 @@ button {
 
 }
 
-.tittle {
+.title {
   color: white;
 }
 h1, h2, h3 {
@@ -26,22 +26,28 @@ h1, h2, h3 {
 span {
   color: white;
 }
-.decr {
+.decScore {
   background-color: #e56b6f;
 }
-.incr {
+.incScore {
   background-color: #2a7197;
 }
-.res {
+.reset {
   background-color: red;
 }
-.getquest {
+.getQuestion {
   background-color: #ead27a
 }
-.reveal {
+.togAnswer {
   border-radius: 6px;
   font-size: 16px;
   background-color: rgb(6, 30, 56);
   color: white;
   font-weight: bold;
+}
+
+.answer, .question {
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: larger;
 }

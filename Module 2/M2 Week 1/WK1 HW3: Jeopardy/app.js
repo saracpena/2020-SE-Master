@@ -12,7 +12,7 @@ class App extends React.Component {
           fetch(this.state.baseURL)
             .then(response => response.json()) 
             .then(json => this.setState({
-            question: json 
+            question: json
         }),    
             err => console.log(err))
     }
@@ -53,15 +53,15 @@ render () {
     return (
             <div>
             <h1>Welcome to Ydrapoej!</h1>
-            <label className="score">Score: {this.state.score}</label>
+            <h2 className="score">Score: <span>{this.state.score}</span></h2>
             <button className="decScore" onClick={() => this.subScore()}>Decrease</button>
             <button className="incScore" onClick={() => this.addScore()}>Increase</button>
             <button className="reset" onClick={() => this.reset()}>Reset</button>
             <h2>Let's Play!</h2>
+            <div><h2 className="category">Category: <span>{category}</span></h2></div><br />
             <button className="getQuestion" onClick={() => this.GetQuestion()}>Get Question</button><br />
-            <div className="question">{question}</div><br />
-            <div><label className="category">Category: {category}</label></div><br />
-            <div><label className="point">Point: {point}</label></div><br /><br />
+            <div className="question"><span>{question}</span></div><br />
+            <div><h2 className="point">Points: <span>{point}</span></h2></div><br /><br />
             <button className="togAnswer" onClick={() => this.showAnswer()}>Answer</button><br /><br />
             {showAnswer && (<div className="answer">{answer}</div> )}
             </div>
