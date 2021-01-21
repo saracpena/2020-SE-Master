@@ -1,10 +1,47 @@
 body {
-  margin: auto;
+  background-color: #355070;
+  text-align: center;
   box-sizing: border-box;
+}
+button {
+  
+  margin: 2px;
+  border-radius: 6px;
+  font-size: 16px;
 }
 .container {
   background-color: rgb(70, 75, 111);
   margin-left: auto;
 
+}
 
+.tittle {
+  color: white;
+}
+h1, h2, h3 {
+  color: #ead27a;
+  font-family: 'Chau Philomene One', sans-serif;
+  
+}
+span {
+  color: white;
+}
+.decr {
+  background-color: #e56b6f;
+}
+.incr {
+  background-color: #2a7197;
+}
+.res {
+  background-color: red;
+}
+.getquest {
+  background-color: #ead27a
+}
+.reveal {
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: rgb(6, 30, 56);
+  color: white;
+  font-weight: bold;
 }

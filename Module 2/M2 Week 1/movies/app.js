@@ -1,8 +1,8 @@
-//! MY API KEY = 
+//! MY API KEY = 37d7ecaf
 class App extends React.Component {
     state = {
         baseURL: 'http://www.omdbapi.com/?',
-        apikey: 'apikey=' + '',
+        apikey: 'apikey=' + '37d7ecaf',
         query: '&t=',
         movieTitle: '',
         searchURL: '',
@@ -15,7 +15,7 @@ class App extends React.Component {
       handleSubmit = (event) => {
         event.preventDefault()
         this.setState({
-          searchURL: this.state.baseURL + this.state.apikey + this.state.query + this.state.movieTitle
+          searchURL: this.state.baseURL + this.state.apikey + this.state.query + this.state.movieTitle.toLowerCase()
         }, () => {
           fetch(this.state.searchURL)
             .then(response => {
