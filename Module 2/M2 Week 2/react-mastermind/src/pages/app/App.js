@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import GamePage from '../../pages/GamePage/GamePage';
 import SettingsPage from '../../pages/SettingsPage/SettingsPage';
+import Portal from '../../components/Portal/Portal'
 
 
 // Route component import
@@ -19,7 +20,8 @@ class App extends Component {
     return {
       selColorIdx: 0,
       guesses: [this.getNewGuess()],
-      code: this.genCode()
+      code: this.genCode(),
+      instructions: true
     };
   }
 
@@ -134,17 +136,32 @@ class App extends Component {
     });
   }
 
+  toggleInstructions = () => {
+    this.setState({instructions: !this.state.instructions})
+  }
   render() {
     let winTries = this.getWinTries();
     
     return (
       <div className="App">
-
+     
+      {this.state.instructions ?
+        <Portal>
+          <div className='portal'>
+            <h1>Testing</h1>
+            <p></p>
+            <button onClick={this.toggleInstructions}>Close</button>
+            <img/>
+          </div>
+        </Portal>
+        : ''
+        }
         <header className='App-header-footer'>R E A C T &nbsp;&nbsp;&nbsp;  M A S T E R M I N D</header>
         
         <Switch>
           <Route exact path='/' render={() => 
-            <GamePage 
+            <GamePage
+                toggleInstructions={this.toggleInstructions} 
                 winTries={winTries}
                 colors={colors}
                 selColorIdx={this.state.selColorIdx}

@@ -27,6 +27,7 @@ const GamePage = (props) => {
             />
             <GameTimer />
             <Link className='btn btn-default' to='/settings'>Difficulty</Link>
+            <button className='btn btn-default' onClick={props.toggleInstructions}>How to play</button>
             <NewGameButton handleNewGameClick={props.handleNewGameClick}/>
           </div>
         </div>
