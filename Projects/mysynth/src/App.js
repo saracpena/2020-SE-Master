@@ -1,18 +1,21 @@
 import {Component} from 'react'
 import PlayChord from './components/PlayChord'
 import PlaySynth from './components/PlaySynth'
+import BlackKeys from './components/BlackKeys'
 import * as Tone from 'tone'
 
 class App extends Component{
     state = {
         synth: new Tone.MonoSynth().toMaster(),
-        chord: new Tone.Synth().toDestination()
+        chord: new Tone.Synth().toDestination(),
+        black: new Tone.PolySynth(Tone.Synth).toDestination()
     }
     render(){
     return(
         <div > 
-            <PlaySynth synth={this.state.synth}/>
-            <PlayChord chord={this.state.chord} />   
+            <PlaySynth synth={this.state.synth} />
+            <PlayChord chord={this.state.chord} />
+            <BlackKeys black={this.state.black} />  
         </div>
     );
     }
