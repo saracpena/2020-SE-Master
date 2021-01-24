@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# BabySynth Project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Made with GIPHY.COM
 
-In the project directory, you can run:
+https://giphy.com/apps/giphycapture
 
 ### `npm start`
 
@@ -14,57 +14,27 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### What is BabySynth?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+BabySynth is a small synthesizer keyboard that plays 8 notes total and can only be played by clicking through the keys. These notes include white keys which are the natural notes 'C thru G' and 3 black keys which are sharp/flat notes 'C# D# and F#'.
 
-### `npm run build`
+In addition, there are a couple buttons that play an arpeggio of the C major 7 chord and a reversed C chord. Arpeggios simply play a chord one note at a time.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Sources
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I sought out my sources from Tone.js and installed the librairies from https://tonejs.github.io/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Wishlist Ideas
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    * Eventually I'd like to include a couple buttons that shape the sounds of the keyboard also known as filters. This filter can change the shapes/lengths/pitch of each sound when engaged.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    * I'd like to include a mod wheel and a volume level with an on/off switch.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    * Ability to connect a midi keyboard.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    * WhiteKeys to become the Keyboard Component, which renders separate compoments WhiteKeys and BlackKeys
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

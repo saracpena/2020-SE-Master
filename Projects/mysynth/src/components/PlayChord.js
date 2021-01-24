@@ -17,7 +17,7 @@ const PlayChord = (props) => {
         props.chord.triggerAttackRelease("C4", "8n", now + 1)
     }
     return(
-        <div id='wrapper'>
+        <div className='arpeggios'>
             <button id='button-1' onClick={play}>Major Arpeggio</button>
             <button id='button-1' onClick={rev}>Reverse Major Arpeggio</button>
         </div>
