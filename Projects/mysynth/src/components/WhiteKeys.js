@@ -6,6 +6,9 @@ const keyboardMap = [
   { note: "E2", octave: "8n", name: "E" },
   { note: "F2", octave: "8n", name: "F" },
   { note: "G2", octave: "8n", name: "G" },
+  { note: "A2", octave: "8n", name: "A" },
+  { note: "B2", octave: "8n", name: "B" },
+  { note: "C3", octave: "8n", name: "C" },
 ];
 
 const WhiteKeys = (props) => {
