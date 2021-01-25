@@ -21,8 +21,9 @@ body {
   box-shadow:0 0 50px rgba(0,0,0,0.5) inset,0 1px rgba(212,152,125,0.2) inset,0 5px 15px rgba(0,0,0,0.5)
 }
 
+
+
 .wrapper-white{
-  align-content:center;
   height:16em;
   width:4em;
   z-index:1;
@@ -33,6 +34,13 @@ body {
   background:linear-gradient(to bottom,#eee 0%,#fff 100%)
 }
 
+.wrapper-white:active {
+  border-top:1px solid #777;
+  border-left:1px solid #999;
+  border-bottom:1px solid #999;
+  box-shadow:2px 0 3px rgba(0,0,0,0.1) inset,-5px 5px 20px rgba(0,0,0,0.2) inset,0 0 3px rgba(0,0,0,0.2);
+  background:linear-gradient(to bottom,#fff 0%,#e9e9e9 100%);
+}
 
 .black-keys{
   color: white;
@@ -47,9 +55,27 @@ body {
   background:linear-gradient(45deg,#222 0%,#555 100%);
 }
 
+.black-keys:active {
+  box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset,0 -2px 2px 3px rgba(0,0,0,0.6) inset,0 1px 2px rgba(0,0,0,0.5);
+  background:linear-gradient(to right,#444 0%,#222 100%);
+}
+
+.bkcontainer{
+  margin: -265px 0em 2em -1em;
+  list-style:none;
+  margin: 25 25 0 20em;
+}
+
+.black-.black-keys{
+  background-color: red;
+}
+
+button{
+  margin:3 0 0 1em;
+}
 
 button:hover{
-  color: red;
+  background-color: red;
 }
 
 .arpeggios{
@@ -67,4 +93,3 @@ h1{
     color: #77EDFA;
     animation: dot var(--duration) var(--easing) both;
 }
-

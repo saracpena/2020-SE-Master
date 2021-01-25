@@ -20,7 +20,7 @@ const WhiteKeys = (props) => {
     <div className="wrapper">
       {keyboardMap.map((el) => (
         <button className ='wrapper-white' key={el.note} onClick={() => playNote(el.note, el.octave)}>
-          {el.name}
+         
         </button>
       ))}
     </div>

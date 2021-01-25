@@ -17,7 +17,7 @@ const BlackKeys = (props) => {
             <div className="bkcontainer">
               {BlackKeyMap.map((el) => (
                 <button className ='black-keys' key={el.note} onClick={() => sharpNote(el.note, el.octave)}>
-                  {el.name}
+                  
                 </button>
               ))}
             </div>
