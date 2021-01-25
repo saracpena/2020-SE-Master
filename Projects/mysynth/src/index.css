@@ -7,17 +7,9 @@ body {
   background:#222;
   background: linear-gradient(90deg, rgba(2,0,36,1) 7%, rgba(9,9,121,1) 41%, rgba(180,0,255,1) 100%);
   font-family: 'Potta One', cursive;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
 }
 
-.bkey{
-  position: relative; top: 200;
-  float: right;
-}
-
-.wrapper{
+#root{
   height:18.875em;
   width:35em;
   margin:8em auto;
@@ -41,12 +33,6 @@ body {
   background:linear-gradient(to bottom,#eee 0%,#fff 100%)
 }
 
-.bkcontainer{
-  position: relative; left: 200; bottom: 200;
-  z-index:1;
-  justify-content: space-evenly;
-  
-}
 
 .black-keys{
   color: white;
@@ -66,9 +52,8 @@ button:hover{
   color: red;
 }
 
-
 .arpeggios{
-  grid-column: 33%, 33%, 33%, 1em;
+  align-items: center;
 }
 
 h1{
@@ -83,13 +68,3 @@ h1{
     animation: dot var(--duration) var(--easing) both;
 }
 
-@keyframes text-bonk {
-  80%,
-  85%,
-  to {
-    transform: none;
-  }
-  82% {
-    transform: translateX(-20%);
-  }
-}
