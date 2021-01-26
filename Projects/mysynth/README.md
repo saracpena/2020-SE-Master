@@ -14,7 +14,8 @@
     Successfully align "key note" names
 
 # User stories
-    Learn a new instrument
+    
+
 # Personal notes so you can come back to your project later in the course and be able to pick up your train of thought, etc
     
     ### Wishlist Ideas
