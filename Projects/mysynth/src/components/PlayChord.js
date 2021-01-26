@@ -18,7 +18,7 @@ const PlayChord = (props) => {
     }
     return(
         <div className='arpeggios'>
-            <button id='button-1' onClick={play}>Major Arpeggio</button>
+            <button id='button-1' onClick={play}>Major 7 Arpeggio</button>
             <button id='button-1' onClick={rev}>Reverse Major Arpeggio</button>
         </div>
     );
